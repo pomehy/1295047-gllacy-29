@@ -5,8 +5,59 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body class="page-body">
-    <header class="page-header">
-
+    <header class="page-header main-header">
+      <a class="logo page-header__logo" href="#">
+        <img src="img/logo.svg" alt="Логотип Gllacy Shop" width="154" height="64">
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item sub-menu">
+            <a class="main-nav__link" href="catalog.html">Каталог</a>
+            <ul class="sub-menu__list">
+              <li class="sub-menu__item">Новинки </li>
+              <li class="sub-menu__item">
+                <a class="sub-menu__link" href="">Сливочное</a>
+              </li>
+              <li class="sub-menu__item">
+                <a class="sub-menu__link" href="">Щербеты</a>
+              </li>
+              <li class="sub-menu__item">
+                <a class="sub-menu__link" href="">Фруктовый лед</a>
+              </li>
+              <li class="sub-menu__item">
+                <a class="sub-menu__link" href="">Мелорин</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="">Доставка и оплата</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="">О компании</a>
+          </li>
+        </ul>
+        <ul class="user-menu">
+          <li class="user-menu__item">
+            <form action="">
+              <button type="button" aria-label="Кнопка поиска по сайту"></button>
+              <div class="main-search-wrapper">
+                <label class="main-search" for="main-search">Поиск по сайту</label>
+                <input type="search" id="main-search" >
+              </div>
+            </form>
+          </li>
+          <li class="user-menu__item">
+            <a class="user-menu__link" href="#">Вход</a>
+          </li>
+          <li class="user-menu__item">
+            <a class="user-menu__link" href="#">Пусто</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="main-header__contacts">
+        <p>с 10 до 20, ежедневно</p>
+        <a href="tel:+78124502525">8 812 450-25-25</a>
+      </div>
     </header>
     <main class="page-main">
 
