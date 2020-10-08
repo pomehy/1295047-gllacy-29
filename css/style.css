@@ -30,7 +30,7 @@
   font-display: swap;
 }
 
-* Variables */
+/* Variables */
 
 :root {
 
@@ -84,4 +84,46 @@
 
   --basic-color-pagination-active: rgba(255, 255, 255, 0.2);
   --basic-color-input: #F2F2F2;
+}
+
+
+/* Global */
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--basic-color-text);
+
+  background-color: var(--basic-olive);
+}
+
+.page a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
 }
