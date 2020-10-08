@@ -38,18 +38,16 @@
             <a class="main-nav__link" href="#">О компании</a>
           </li>
         </ul>
-        <ul class="user-menu">
-          <li class="user-menu__item">
-            <form action="">
-              <button type="button" aria-label="Кнопка поиска по сайту"></button>
-              <div class="main-search-wrapper">
-                <label class="main-search" for="main-search">Поиск по сайту</label>
-                <input type="search" id="main-search" placeholder="Крем-брюле">
-              </div>
-            </form>
-          </li>
-          <li class="user-menu__item">
-            <a class="user-menu__link login" href="#">Вход</a>
+        <div class="user-menu-wrapper">
+          <form class="main-nav__search" action="">
+            <button type="button" aria-label="Кнопка поиска по сайту"></button>
+            <div class="main-search-wrapper">
+              <label class="main-search" for="main-search">Поиск по сайту</label>
+              <input type="search" id="main-search">
+            </div>
+          </form>
+          <div class="main-nav__login login">
+            <a class="user-menu__link" href="#">Вход</a>
             <form action="">
               <label for="login-e-mail">Электронная почта:</label>
               <input type="email" id="login-e-mail" placeholder="email@example.com">
@@ -65,9 +63,9 @@
                 </li>
               </ul>
             </form>
-          </li>
-          <li class="user-menu__item cart">
-            <a class="user-menu__link" href="#"><span>Корзина </span>2 товара</a>
+          </div>
+          <div class="main-nav__cart cart">
+            <a class="cart__link" href="#"><span>Корзина </span>2 товара</a>
             <ul class="cart__list">
               <li class="cart__item cart-product">
                 <button class="delete-cart-product" type="button" aria-label="Удалить товар из корзины"></button>
@@ -84,8 +82,8 @@
             </ul>
             <p class="cart__price">750 руб.</p>
             <button class="button" type="submit">Оформить заказ</button>
-          </li>
-        </ul>
+          </div>
+        </div>
       </nav>
       <div class="main-header__contacts">
         <p>с 10 до 20, ежедневно</p>
@@ -327,10 +325,10 @@
         </ul>
       </section>
       <section class="copyright">
-        <a href="#">
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img class="copyright__logo" src="img/htmlacademy-logo.svg" alt="htmlacademy">
         </a>
-        <p>Сделано в <a href="#">HTML Academy</a> © 2019</p>
+        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
       </section>
     </footer>
   </body>
