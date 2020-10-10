@@ -163,8 +163,8 @@
         </ul>
       </section>
       <section class="features">
-        <h2>Преимущества магазина</h2>
-        <p class="afeatures__title">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+        <h2 class="visually-hidden">Преимущества магазина</h2>
+        <p class="features__title">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
         <ul class="features__list">
           <li class="features__item">
             Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
@@ -182,14 +182,14 @@
       </section>
       <div class="container">
         <article class="blog">
-          <h2>Блог о мороженом</h2>
+          <h2 class="visually-hidden">Блог о мороженом</h2>
           <p>Новое в нашем блоге</p>
-          <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+          <a class="blog__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
         </article>
         <article class="subscribe">
-          <h2>Подписаться на рассылку</h2>
-          <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <form action="#">
+          <h2 class="visually-hidden">Подписаться на рассылку</h2>
+          <form class="subscribe__form" action="#">
+            <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
             <label for="subscribe-email">Электронная почта</label>
             <input type="email" id="subscribe-email">
             <button class="button" type="submit">Отправить</button>
@@ -197,18 +197,18 @@
         </article>
       </div>
       <section class="map">
-        <h2>Расположение магазина на карте</h2>
-        <section class="contacts">
-          <h2>Наши контакты</h2>
-          <p>Адрес главного офиса и офлайн-магазина: ул. Большая Конюшенная, 19/8, Санкт-Петербург</p>
-          <p>Для заказов по телефону: <a href="tel:+78124502525">8 812 450-25-25</a>(с 10 до 20 ежедневно)</p>
-          <a class="button contacts__link" href="#">Форма обратной связи</a>
-        </section>
+        <h2 class="visually-hidden">Расположение магазина на карте</h2>
+      </section>
+      <section class="contacts">
+        <h2 class="visually-hidden">Наши контакты</h2>
+        <p>Адрес главного офиса и офлайн-магазина:<span>ул. Большая Конюшенная, 19/8, Санкт-Петербург</span></p>
+        <p>Для заказов по телефону: <a class="contacts__phone" href="tel:+78124502525">8 812 450-25-25</a>(с 10 до 20 ежедневно)</p>
+        <a class="button contacts__link" href="#">Форма обратной связи</a>
       </section>
     </main>
     <footer class="page-footer">
       <section class="social">
-        <h2>Мы в социальных сетях</h2>
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link" href="#">
@@ -233,7 +233,7 @@
         </ul>
       </section>
       <section class="legal">
-        <h2>Правовая информация</h2>
+        <h2 class="visually-hidden">Правовая информация</h2>
         <ul class="legal__list">
           <li class="legal__item">
             <a class="legal__link" href="#">Для поставщиков</a>
@@ -250,10 +250,11 @@
         </ul>
       </section>
       <section class="copyright">
+        <h2 class="visually-hidden">Разработчик:</h2>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img class="copyright__logo" src="img/htmlacademy-logo.svg" alt="htmlacademy">
         </a>
-        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
+        <p>Сделано в <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
       </section>
     </footer>
   </body>
