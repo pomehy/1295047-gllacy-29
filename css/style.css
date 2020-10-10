@@ -36,7 +36,6 @@
   --basic-black: #000000;
   --basic-black-transparent-7: rgba(0, 0, 0, 0.07);
 
-
   --basic-white: #ffffff;
   --basic-white-transparent-20: rgba(255, 255, 255, 0.2);
   --basic-white-transparent-40: rgba(255, 255, 255, 0.4);
@@ -173,6 +172,8 @@ img {
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
+
+  border-radius: 26px;
 }
 
 .main-nav__link::after {
@@ -191,12 +192,63 @@ img {
 .main-nav__link:focus {
   color: var(--basic-dark);
   background-color: var(--basic-white);
-  border-radius: 26px;
 }
 
 .main-nav__link:active {
   background: var(--main-nav-active-color);
   box-shadow: inset 0px 2px 1px var(--main-nav-active-box-shadow-color);
-  border-radius: 26px;
 }
+
+.main-nav__link--active {
+  background-color: var(--main-nav-current-color);
+}
+
+.main-nav__link--active::after {
+  display: none;
+}
+
+/* sub-menu */
+
+.sub-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sub-menu__item:first-child a {
+  font:inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-dark);
+}
+
+.sub-menu__link {
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 21px;
+
+  font: inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--basic-dark);
+
+  background-color: transparent;
+}
+
+.sub-menu__link:hover,
+.sub-menu__link:focus {
+  background-color: var(--submenu-hover-link-color);
+}
+
+.sub-menu__link:active {
+  background-color: var(--submenu-active-link-color);
+}
+
+.sub-menu__link--active {
+  background-color: var(--main-nav-current-color);
+}
+
 
