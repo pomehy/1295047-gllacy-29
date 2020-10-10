@@ -628,6 +628,14 @@ img {
   color: var(--basic-dark-light);
 }
 
+.subscribe .button {
+  padding-top: 14px;
+  padding-right: 19px;
+  padding-bottom: 13px;
+  padding-left: 19px;
+
+  border: none;
+}
 
 /* contacts */
 
