@@ -33,57 +33,54 @@
 /* Variables */
 
 :root {
-
-  /* background-color */
-  --basic-olive: #849D8F;
-  --basic-silvergrey: #8996A6;
-  --basic--coffee: #9D8B84;
-
-  /* color */
-   --basic-black: #000000;
-   --basic-black-transaprent-7: rgba(0, 0, 0, 0.07);
+  --basic-black: #000000;
+  --basic-black: rgba(0, 0, 0, 0.07);
+  --basic-black: #000000;
 
   --basic-white: #ffffff;
   --basic-white-transparent-20: rgba(255, 255, 255, 0.2);
   --basic-white-transparent-40: rgba(255, 255, 255, 0.4);
-  --basic-white-transparent-50: rgba(255, 255, 255, 0.5);
   --basic-white-transparent-80: rgba(255, 255, 255, 0.8);
 
+  --basic-text-color: #323232;
+  --basic-text-color-transparent-20: rgba(50, 50, 50, 0.2);
+  --basic-text-color-transparent-30:rgba(50, 50, 50, 0.3);
+
+  --basic-color-price-cart: #ABABAB;
+
+  /* buttons */
+
+  --basic-button-bg-color: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+  --basic-button-bg-color-product: linear-gradient(180deg, #F26843 0%, #E84D37 100%);
+
+  /* inputs */
+
+  --basic-input-text-color: #999999;
+  --user-menu-input-border-color: #D2D3D2;
+  --modal-input-border-color: rgba(178, 178, 178, 0.52);
   --basic-outline-color: rgba(46, 136, 228, 0.52);
 
-  --basic-page-active-color: #D07058;
+  /* canvas  */
+  --bg-canvas-color: #F8F7F4;
+  --bg-canvas-color-transparent-50: rgb(248, 247, 244, 0.5);
 
-  --basic-color-text: #323232;
-  --basic-text-shadow-text: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  /* links */
+  --main-nav-active-color: #EDEDED;
+  --main-nav-current-color: #D07058;
 
-  --basic-red: #AC1000;
-  --basic-red-transparent-25: rgba(172, 16, 0, 0.25);
-  --basic-red-transparent-64: rgba(172, 16, 0, 0.64);
+  --submenu-hover-link-color: #FBDED7;
+  --submenu-active-link-color: #F6B5A5;
 
+  --hover-active-link-color: #FFBC9E;
+  --hover-active-link-color-transparent-30: rgb(255, 188, 158, 0.3);
 
-  /* box-shadows */
-  --box-shadow-block: rgba(0, 0, 0, 0.4);
-  --box-shadow-nav-button-inset-: inset 0px 2px 1px #696969;;
+  --hover-active-canvas-link-color: #E84D37;
+  --hover-active-canvas-link-color-transparent-30: rgb(232, 77, 55, 0.3);
 
-  /* color-link */
-  --hover-active-link-hover-active: #FFBC9E;
-  --hover-active-bg-link-: #E84D37;
-
-  /* form-color */
-  --basic-input: #D3D3D2;
-  --basic-input-modal: rgba(178, 178, 178, 0.52);
-
-  --basic-form-background: #F8F7F4;
-
-  /* button */
-  --basic-button-color: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  --hover-button-color: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  --active-button-color: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  --box-shadow-button-inset-: inset 0px 2px 2px #942718;
-
-
-  --basic-color-pagination-active: rgba(255, 255, 255, 0.2);
-  --basic-color-input: #F2F2F2;
+  /* background */
+  --basic-bg-olive: #849D8F;
+  --basic-bg-silvergrey: #8996A6;
+  --basic-bg-coffee: #9D8B84;
 }
 
 
@@ -127,3 +124,22 @@ img {
 *::after {
   box-sizing: border-box;
 }
+
+/* button */
+
+button {
+  border-radius: 26px;
+  background-image: var(--basic-button-color);
+  box-shadow: var(--box-shadow-button);
+}
+
+button:hover {
+  background-image: var(--hover-button-color);
+  box-shadow: ;
+}
+
+button:active {
+  background-image: var(--hover-button-color);
+  box-shadow: var(--box-shadow-button-inset-);
+}
+
