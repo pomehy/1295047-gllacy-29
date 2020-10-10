@@ -34,24 +34,29 @@
 
 :root {
   --basic-black: #000000;
-  --basic-black: rgba(0, 0, 0, 0.07);
-  --basic-black: #000000;
+  --basic-black-transparent-7: rgba(0, 0, 0, 0.07);
+
 
   --basic-white: #ffffff;
   --basic-white-transparent-20: rgba(255, 255, 255, 0.2);
   --basic-white-transparent-40: rgba(255, 255, 255, 0.4);
   --basic-white-transparent-80: rgba(255, 255, 255, 0.8);
 
-  --basic-text-color: #323232;
-  --basic-text-color-transparent-20: rgba(50, 50, 50, 0.2);
-  --basic-text-color-transparent-30:rgba(50, 50, 50, 0.3);
+  --basic-dark: #323232;
+  --basic-dark-transparent-20: rgba(50, 50, 50, 0.2);
+  --basic-dark-transparent-30:rgba(50, 50, 50, 0.3);
+
+  --basic-red: #AC1000;
+  --basic-darkred: #942718;
 
   --basic-color-price-cart: #ABABAB;
 
   /* buttons */
+  --button-bg-start-color: #F26843;
+  --button-bg-end-color: #E74A35;
+  --button-box-shadow-color: rgba(172, 16, 0, 0.64);
 
-  --basic-button-bg-color: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  --basic-button-bg-color-product: linear-gradient(180deg, #F26843 0%, #E84D37 100%);
+  --button-bg-end-color-product: #E84D37;
 
   /* inputs */
 
@@ -67,6 +72,7 @@
   /* links */
   --main-nav-active-color: #EDEDED;
   --main-nav-current-color: #D07058;
+  --main-nav-active-box-shadow-color: #696969;
 
   --submenu-hover-link-color: #FBDED7;
   --submenu-active-link-color: #F6B5A5;
@@ -92,12 +98,10 @@ body {
   padding: 0;
 
   font-family: 'Roboto', Arial, sans-serif;
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: 400;
-  color: var(--basic-text-color);
+  font-style: normal;
+  color: var(--basic-white);
 
-  background-color: var(--basic-bg-olive:);
+  background-color: var(--basic-bg-olive);
 }
 
 .page a {
@@ -127,15 +131,72 @@ img {
 
 /* button */
 
-button {
-
+.button {
+  color: var(--basic-white);
+  border-radius: 70px;
+  background-image: linear-gradient(180deg, var(--button-bg-start-color) 0%, var(--button-bg-end-color) 100%);
+  box-shadow: 0px 2px 2px var(--button-box-shadow-color);
 }
 
-button:hover {
-
+.button:hover,
+.button:focus {
+  background-image: linear-gradient(0deg, var(--basic-white-transparent-20), var(--basic-white-transparent-20)), linear-gradient(180deg, var(--button-bg-start-color) 0%, var(--button-bg-end-color) 100%);
+  box-shadow: 0px 2px 2px var(--basic-red);
 }
 
-button:active {
+.button:active {
+  background-image: linear-gradient(0deg, var(--basic-black-transparent-7), var(--basic-black-transparent-7)), linear-gradient(180deg, var(--button-bg-start-color) 0%, var(--button-bg-end-color) 100%);
+  box-shadow: inset 0px 2px 2px var(--basic-darkred);
+}
 
+
+
+/* main-nav */
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav__link {
+  position: relative;
+
+  display: flex;
+  padding-top: 9px;
+  padding-right: 13px;
+  padding-bottom: 11px;
+  padding-left: 13px;
+
+  font: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+
+.main-nav__link::after {
+  content: '';
+
+  position: absolute;
+  bottom: 8px;
+
+  width: 100%;
+  height: 1px;
+
+  background-color: var(--basic-white-transparent-20);
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus {
+  color: var(--basic-dark);
+  background-color: var(--basic-white);
+  border-radius: 26px;
+}
+
+.main-nav__link:active {
+  background: var(--main-nav-active-color);
+  box-shadow: inset 0px 2px 1px var(--main-nav-active-box-shadow-color);
+  border-radius: 26px;
 }
 
