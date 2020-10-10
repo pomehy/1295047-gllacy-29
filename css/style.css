@@ -47,6 +47,7 @@
 
   --basic-red: #AC1000;
   --basic-darkred: #942718;
+  --basic-darkred-box-shadow:  rgba(160, 32, 11, 0.76);
 
   --basic-color-price-cart: #ABABAB;
 
@@ -362,4 +363,41 @@ img {
   font-size: 22px;
   line-height: 24px;
   color: var(--basic-white);
+}
+
+
+/* slider */
+
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slider__title {
+  font:inherit;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+
+  text-align: center;
+}
+
+.slider__link {
+  padding-top: 8px;
+  padding-right: 23px;
+  padding-bottom: 8px;
+  padding-left: 23px;
+
+  font: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: 0.05em;
+
+  color: var(--basic-white);
+  text-shadow: 0px 2px 5px var(--basic-darkred-box-shadow);
+
+  box-shadow: 0px 2px 2px var(--button-box-shadow-color);
 }
