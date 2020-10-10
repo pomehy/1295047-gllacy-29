@@ -2,8 +2,6 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Глейси</title>
   </head>
   <body class="page-body">
@@ -38,23 +36,40 @@
             <a class="main-nav__link" href="#">О компании</a>
           </li>
         </ul>
-        <ul class="user-menu">
-          <li class="user-menu__item">
-            <form action="">
-              <button type="button" aria-label="Кнопка поиска по сайту"></button>
-              <div class="main-search-wrapper">
-                <label class="main-search" for="main-search">Поиск по сайту</label>
-                <input type="search" id="main-search" >
-              </div>
-            </form>
-          </li>
-          <li class="user-menu__item">
+        <div class="user-menu-wrapper">
+          <form class="main-nav__search" action="">
+            <button type="button" aria-label="Кнопка поиска по сайту"></button>
+            <div class="main-search-wrapper">
+              <label class="main-search" for="main-search">Поиск по сайту</label>
+              <input type="search" id="main-search">
+            </div>
+          </form>
+          <div class="main-nav__login login">
             <a class="user-menu__link" href="#">Вход</a>
-          </li>
-          <li class="user-menu__item">
-            <a class="user-menu__link" href="#"><span>Корзина </span>Пусто</a>
-          </li>
-        </ul>
+            <form method="POST" ction="">
+              <label for="login-e-mail">Электронная почта:</label>
+              <input type="email" id="login-e-mail" placeholder="email@example.com">
+              <label for="login-password">Пароль:</label>
+              <input type="password" placeholder="......">
+              <button class="button login__button"type="submit">Войти</button>
+              <ul class="login__links">
+                <li>
+                  <a href="#">Забыли пароль</a>
+                </li>
+                <li>
+                  <a href="#">Новая регистрация</a>
+                </li>
+              </ul>
+            </form>
+          </div>
+          <div class="main-nav__cart cart">
+            <a class="cart__link" href="#"><span>Корзина </span>Пусто</a>
+            <ul class="cart__list">
+              <li class="cart__item cart-product">
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
       <div class="main-header__contacts">
         <p>с 10 до 20, ежедневно</p>
@@ -141,11 +156,10 @@
           </li>
         </ul>
       </section>
-      <section class="about-us">
-        <h2>О компании</h2>
-        <p class="about-us__title">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
-        <h3>Преимущества магазина</h3>
-        <ul class="features">
+      <section class="features">
+        <h2>Преимущества магазина</h2>
+        <p class="afeatures__title">Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного производства на развес</p>
+        <ul class="features__list">
           <li class="features__item">
             Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
           </li>
@@ -169,6 +183,11 @@
         <article class="subscribe">
           <h2>Подписаться на рассылку</h2>
           <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <form action="#">
+            <label for="subscribe-email">Электронная почта</label>
+            <input type="email" id="subscribe-email">
+            <button type="submit">Отправить</button>
+          </form>
         </article>
       </div>
       <section class="map">
@@ -224,10 +243,10 @@
         </ul>
       </section>
       <section class="copyright">
-        <a href="#">
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
           <img class="copyright__logo" src="img/htmlacademy-logo.svg" alt="htmlacademy">
         </a>
-        <p>Сделано в <a href="#">HTML Academy</a> © 2019</p>
+        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
       </section>
     </footer>
   </body>
