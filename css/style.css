@@ -398,12 +398,38 @@ img {
 
   color: var(--basic-white);
   text-shadow: 0px 2px 5px var(--basic-darkred-box-shadow);
-
-  box-shadow: 0px 2px 2px var(--button-box-shadow-color);
 }
 
 .slider__controls {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+/* promo */
+
+.promo__offer h3 {
+  font: inherit;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.promo__offer p {
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.promo__offer a {
+  padding-top: 15px;
+  padding-right: 22px;
+  padding-bottom: 16px;
+  padding-left: 22px;
+
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
 }
