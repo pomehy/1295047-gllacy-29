@@ -508,3 +508,33 @@ img {
   box-shadow: 0px 1px 2px var(--basic-red);
   border-radius: 50px;
 }
+
+
+/* features */
+
+.features {
+  background-image: url(../img/wafer-pattern.jpg);
+  border-radius: 16px;
+}
+
+.features__title {
+  font: inherit;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-dark);
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features__item {
+  font: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--basic-dark);
+}
