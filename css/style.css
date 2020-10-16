@@ -549,6 +549,47 @@ img {
   line-height: 24px;
 }
 
+/* filter */
+
+.filter__button {
+  padding-top: 7px;
+  padding-right: 29px;
+  padding-bottom: 7px;
+  padding-left: 29px;
+  width: 144px;
+
+  font: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+
+  background-color: var(--basic-white-transparent-20);
+  border: 2px solid var(--basic-white);
+  border-radius: 20px;
+
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.filter__button:hover,
+.filter__button:focus {
+  color: var(--basic-dark);
+  background-color: var(--basic-white);
+}
+
+.filter__button:active {
+  padding-top: 9px;
+  padding-right: 29px;
+  padding-bottom: 9px;
+  padding-left: 29px;
+  color: var(--basic-dark);
+
+  border: none;
+  background-color: var(--basic-white);
+  box-shadow: inset 0px 2px 1px var(--main-nav-active-box-shadow-color);
+}
+
 /* products */
 
 .products__list {
