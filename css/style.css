@@ -139,6 +139,16 @@ img {
   box-sizing: border-box;
 }
 
+/* container */
+
+/* .container {
+  width: 1160px;
+  margin: 0 auto;
+
+  padding-right: 40px;
+  padding-left: 40px;
+} */
+
 /* button */
 
 .button {
@@ -703,6 +713,8 @@ img {
   border-radius: 50px;
 }
 
+
+
 .pagination__list {
   display: flex;
 
@@ -740,12 +752,20 @@ img {
 /* features */
 
 .features {
+  padding-top: 24px;
+  padding-right: 20px;
+  padding-bottom: 24px;
+  padding-left: 20px;
+
   background-color: var(--bg-wafer-pattern);
   background-image: url(../img/wafer-pattern.jpg);
   border-radius: 16px;
 }
 
+
 .features__title {
+  margin-top: 0;
+
   font: inherit;
   font-weight: 500;
   font-size: 24px;
@@ -770,15 +790,32 @@ img {
 /* blog */
 
 .blog {
-  background-color: var(--basic-white);
-  background-image: url(../img/strawberry-bg.jpg);
+  position: relative;
 
-  background-repeat: no-repeat;
+  width: 560px;
+  height: 220px;
+  padding-top: 23px;
+  padding-right: 20px;
+  padding-bottom: 23px;
+  padding-left: 20px;
+
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.blog img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 
   border-radius: 16px;
 }
 
 .blog p {
+  margin-top: 0;
+  margin-bottom: 15px;
+
   font: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -787,14 +824,22 @@ img {
   color: var(--basic-dark);
 }
 
-.blog__link {
-  display: flex;
-
+.blog a {
   font:inherit;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
+
+  text-decoration: underline;
 }
+
+.blog a::after {
+  display: none;
+}
+
+
+
+
 
 .blog__link::after {
   bottom: 2px;
@@ -808,6 +853,8 @@ img {
 
 .subscribe {
   padding: 6px;
+  width: 560px;
+  height: 220px;
 
   background-color: var(--bg-canvas-color);
   background-image: url(../img/post-pattern.jpg);
@@ -817,14 +864,21 @@ img {
 }
 
 .subscribe__form {
+  padding-top: 29px;
+  padding-right: 20px;
+  padding-bottom: 35px;
+  padding-left: 20px;
   width: 100%;
   height: 100%;
   background-color: var(--bg-canvas-color);
   border-radius: 16px;
+
+  box-sizing: border-box;
 }
 
 .subscribe__form p {
   margin-top: 0;
+  margin-bottom: 47px;
 
   font:inherit;
   font-weight: 400;
