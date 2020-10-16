@@ -174,66 +174,30 @@ img {
 /* link */
 
 .link {
-  position: relative;
-
   color: var(--basic-white);
-}
-
-.link::after {
-  content: '';
-
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-
-  width: 100%;
-  height: 1px;
-
-  background-color: var(--basic-white-transparent-30);
+  border-bottom: 1px solid var(--basic-white-transparent-30);
 }
 
 .link:hover,
 .link:focus,
 .link:active{
   color: var(--hover-active-link-color);
+  border-color: var(--hover-active-link-color);
 }
 
-.link:hover::after,
-.link:focus::after,
-.link:active::after {
-  background-color: var(--hover-active-link-color);
-}
 
 /* link-canvas */
 
 .link-canvas {
-  position: relative;
-
   color: var(--basic-dark);
-}
-
-.link-canvas::after {
-  content: '';
-
-  position: absolute;
-  bottom: 0px;
-
-  width: 100%;
-  height: 1px;
-
-  background-color: var(--basic-dark-transparent-30);
+  border-bottom: 1px solid var(--basic-dark-transparent-30);
 }
 
 .link-canvas:hover,
 .link-canvas:focus,
 .link-canvas:active{
   color: var(--hover-active-canvas-link-color);
-}
-
-.link-canvas:hover::after,
-.link-canvas:focus::after,
-.link-canvas:active::after {
-  background-color: var(--hover-active-canvas-link-color-transparent-30);
+  border-color: var(--hover-active-canvas-link-color-transparent-30);
 }
 
 .page-body {
@@ -457,9 +421,6 @@ img {
 }
 
 .login__link-list a {
-  position: relative;
-  display: flex;
-
   font:inherit;
   font-weight: 400;
   font-size: 13px;
@@ -1190,7 +1151,6 @@ img {
 }
 
 .copyright__link {
-  position: relative;
   display: inline-block;
   vertical-align: top;
 
@@ -1199,18 +1159,5 @@ img {
   font-size: 12px;
   line-height: 18px;
   color: var(--basic-white);
-}
-
-.copyright__link::after {
-  content: '';
-
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  width: 100%;
-  height: 1px;
-
-  background-color: var(--basic-white-transparent-20);
 }
 
