@@ -499,6 +499,13 @@ img {
   list-style: none;
 }
 
+.page-main__title {
+  font: inherit;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
+}
+
 
 /* breadcrumbs */
 
