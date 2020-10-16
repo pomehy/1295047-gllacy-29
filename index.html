@@ -58,18 +58,18 @@
               <label for="login-password">Пароль:</label>
               <input type="password" placeholder="......">
               <button class="button login__button"type="submit">Войти</button>
-              <ul class="login__links">
+              <ul class="login__link-list">
                 <li>
-                  <a href="#">Забыли пароль</a>
+                  <a class="link" href="#">Забыли пароль</a>
                 </li>
                 <li>
-                  <a href="#">Новая регистрация</a>
+                  <a class="link" href="#">Новая регистрация</a>
                 </li>
               </ul>
             </form>
           </div>
           <div class="main-nav__cart cart">
-            <a class="user-menu__link cart__link" href="#"><span>Корзина </span>Пусто</a>
+            <a class="user-menu__link cart__link" href="#"><span class="visually-hidden">Корзина </span>Пусто</a>
             <ul class="cart__list">
               <li class="cart__item cart-product">
               </li>
@@ -137,28 +137,28 @@
       <section class="hits products">
         <ul class="products__list">
           <li class="products__item products__item--hit">
-            <img class="products__image" src="" alt="">
+            <img class="products__image" src="img/product-1.jpg" alt="" width="267" height="267">
             <p class="products__price">310 &#8381;<span>/кг</span></p>
-            <p class="products__link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-            <a class="products__button" href="#">Быстрый просмотр</a>
+            <a class="link products__link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
           <li class="products__item products__item--hit">
-            <img class="products__image" src="" alt="">
+            <img class="products__image" src="img/product-1.jpg" alt="" width="267" height="267">
             <p class="products__price">380 &#8381;<span>/кг</span></p>
-            <p class="products__link" href="#">Сливочно-кофейное с кусочками шоколада</p>
-            <a class="products__button" href="#">Быстрый просмотр</a>
+            <a class="link products__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
           <li class="products__item products__item--hit">
-            <img class="products__image" src="" alt="">
+            <img class="products__image" src="img/product-1.jpg" alt="" width="267" height="267">
             <p class="products__price">355 &#8381;<span>/кг</span></p>
-            <p class="products__link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</p>
-            <a class="products__button" href="#">Быстрый просмотр</a>
+            <a class="link products__link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
           <li class="products__item products__item--hit">
-            <img class="products__image" src="" alt="">
+            <img class="products__image" src="img/product-1.jpg" alt="" width="267" height="267">
             <p class="products__price">415 &#8381;<span>/кг</span></p>
-            <p class="products__link" href="#">Сливочное крем-брюле с карамельной подливкой </p>
-            <a class="products__button" href="#">Быстрый просмотр</a>
+            <a class="link products__link" href="#">Сливочное крем-брюле с карамельной подливкой </a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -184,7 +184,7 @@
         <article class="blog">
           <h2 class="visually-hidden">Блог о мороженом</h2>
           <p>Новое в нашем блоге</p>
-          <a class="blog__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+          <a class="link-canvas blog__link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
         </article>
         <article class="subscribe">
           <h2 class="visually-hidden">Подписаться на рассылку</h2>
@@ -202,7 +202,7 @@
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
         <p>Адрес главного офиса и офлайн-магазина:<span>ул. Большая Конюшенная, 19/8, Санкт-Петербург</span></p>
-        <p>Для заказов по телефону: <a class="contacts__phone" href="tel:+78124502525">8 812 450-25-25</a>(с 10 до 20 ежедневно)</p>
+        <p>Для заказов по телефону: <a class="link-canvas contacts__phone" href="tel:+78124502525">8 812 450-25-25</a>(с 10 до 20 ежедневно)</p>
         <a class="button contacts__link" href="#">Форма обратной связи</a>
       </section>
     </main>
@@ -236,25 +236,25 @@
         <h2 class="visually-hidden">Правовая информация</h2>
         <ul class="legal__list">
           <li class="legal__item">
-            <a class="legal__link" href="#">Для поставщиков</a>
+            <a class="link legal__link" href="#">Для поставщиков</a>
           </li>
           <li class="legal__item">
-            <a class="legal__link" href="#">Наши документы</a>
+            <a class="link legal__link" href="#">Наши документы</a>
           </li>
           <li class="legal__item">
-            <a class="legal__link" href="#">О производстве</a>
+            <a class="link legal__link" href="#">О производстве</a>
           </li>
           <li class="legal__item">
-            <a class="legal__link" href="#">Экологические стандарты</a>
+            <a class="link legal__link" href="#">Экологические стандарты</a>
           </li>
         </ul>
       </section>
       <section class="copyright">
         <h2 class="visually-hidden">Разработчик:</h2>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img class="copyright__logo" src="img/htmlacademy-logo.svg" alt="htmlacademy">
+          <img class="copyright__logo" src="img/htmlacademy-logo.svg" alt="htmlacademy" width="108" height="39">
         </a>
-        <p>Сделано в <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
+        <p>Сделано в <a class="link copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
       </section>
     </footer>
   </body>

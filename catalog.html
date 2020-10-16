@@ -14,7 +14,7 @@
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item sub-menu">
-            <a class="main-nav__link main-nav__link--active" href="catalog.html">Каталог</a>
+            <a class="main-nav__link" href="catalog.html">Каталог</a>
             <ul class="sub-menu__list">
               <li class="sub-menu__item">
                 <a class="sub-menu__link" href="#">Новинки</a>
@@ -60,12 +60,12 @@
               <label for="login-password">Пароль:</label>
               <input type="password" placeholder="......">
               <button class="button login__button"type="submit">Войти</button>
-              <ul class="login__links">
+              <ul class="login__link-list">
                 <li>
-                  <a href="#">Забыли пароль</a>
+                  <a class="link" href="#">Забыли пароль</a>
                 </li>
                 <li>
-                  <a href="#">Новая регистрация</a>
+                  <a class="link" href="#">Новая регистрация</a>
                 </li>
               </ul>
             </form>
@@ -87,7 +87,7 @@
               </li>
             </ul>
             <p class="cart__price">750 руб.</p>
-            <button class="button" type="submit">Оформить заказ</button>
+            <button class="button cart__button" type="submit">Оформить заказ</button>
           </div>
         </div>
       </nav>
@@ -100,17 +100,17 @@
       <h1>Сливочное мороженное</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item">
-          <a class="breadcrums__link" href="index.html">Главное</a>
+          <a class="link breadcrumbs__link" href="index.html">Главное</a>
         </li>
         <li class="breadcrumbs__item">
-          <a class="breadcrums__link" href="catalog.html">Каталог товаров</a>
+          <a class="link breadcrumbs__link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="breadcrumbs__item">
-          <a class="breadcrums__link" href="#">Сливочное</a>
+          <a class="link breadcrumbs__link" href="#">Сливочное</a>
         </li>
       </ul>
       <section class="filter">
-        <form action="">
+        <form action="#">
           <fieldset>
             <legend>Сортировка:</legend>
             <select name="sorting" id="filter-sort">
@@ -186,101 +186,101 @@
               </li>
             </ul>
           </fieldset>
-          <button class="button filter__button" type="submit">Применить</button>
+          <button class="filter__button" type="submit">Применить</button>
         </form>
       </section>
       <section class="products">
         <ul class="products__list">
           <li class="products__item">
             <img class="products__image" src="" alt="">
-            <p class="products__price">310 Р/<span>кг</span></p>
-            <p class="products__name">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-            <a class="products__link" href="#">Быстрый просмотр</a>
+            <p class="products__price">310 &#8381;<span>/кг</span></p>
+            <a class="products__link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
           <li class="products__item">
             <img class="products__image" src="" alt="">
-            <p class="products__price">380 Р/<span>кг</span></p>
-            <p class="products__name">Сливочно-кофейное с кусочками шоколада</p>
-            <a class="products__link" href="#">Быстрый просмотр</a>
+            <p class="products__price">380 &#8381;<span>/кг</span></p>
+            <a class="products__link" href="#">Сливочно-кофейное с кусочками шоколада</a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
           <li class="products__item">
             <img class="products__image" src="" alt="">
-            <p class="products__price">355 Р/<span>кг</span></p>
-            <p class="products__name">Сливочно-клубничное с присыпкой из белого шоколада</p>
-            <a class="products__link" href="#">Быстрый просмотр</a>
+            <p class="products__price">355 &#8381;<span>/кг</span></p>
+            <a class="products__link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
           <li class="products__item">
             <img class="products__image" src="" alt="">
-            <p class="products__price">415 Р/<span>кг</span></p>
-            <p class="products__name">Сливочное крем-брюле с карамельной подливкой </p>
-            <a class="products__link" href="#">Быстрый просмотр</a>
+            <p class="products__price">415 &#8381;<span>/кг</span></p>
+            <a class="products__link" href="#">Сливочное крем-брюле с карамельной подливкой </a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
           <li class="products__item">
             <img class="products__image" src="" alt="">
-            <p class="products__price">325 Р/<span>кг</span></p>
-            <p class="products__name">Сливочное с брусничным джемом</p>
-            <a class="products__link" href="#">Быстрый просмотр</a>
+            <p class="products__price">325 &#8381;<span>/кг</span></p>
+            <a class="products__link" href="#">Сливочное с брусничным джемом</a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
           <li class="products__item">
             <img class="products__image" src="" alt="">
-            <p class="products__price">410 Р/<span>кг</span></p>
-            <p class="products__name">Сливочно-черничное с цельными ягодами черники</p>
-            <a class="products__link" href="#">Быстрый просмотр</a>
+            <p class="products__price">410 &#8381;<span>/кг</span></p>
+            <a class="products__link" href="#">Сливочно-черничное с цельными ягодами черники</a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
           <li class="products__item">
             <img class="products__image" src="" alt="">
-            <p class="products__price">315 Р/<span>кг</span></p>
-            <p class="products__name">Сливочно-лимонное с карамельной присыпкой</p>
-            <a class="products__link" href="#">Быстрый просмотр</a>
+            <p class="products__price">315 &#8381;<span>/кг</span></p>
+            <a class="products__link" href="#">Сливочно-лимонное с карамельной присыпкой</a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
           <li class="products__item">
             <img class="products__image" src="" alt="">
-            <p class="products__price">320 Р/<span>кг</span></p>
-            <p class="products__name">Сливочное с шоколадной стружкой</p>
-            <a class="products__link" href="#">Быстрый просмотр</a>
+            <p class="products__price">320 &#8381;<span>/кг</span></p>
+            <a class="products__link" href="#">Сливочное с шоколадной стружкой</a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
           <li class="products__item">
             <img class="products__image" src="" alt="">
-            <p class="products__price">440 Р/<span>кг</span></p>
-            <p class="products__name">Сливочно-ванильное с кусочками шоколада</p>
-            <a class="products__link" href="#">Быстрый просмотр</a>
+            <p class="products__price">440 &#8381;<span>/кг</span></p>
+            <a class="products__link" href="#">Сливочно-ванильное с кусочками шоколада</a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
           <li class="products__item">
             <img class="products__image" src="" alt="">
-            <p class="products__price">435 Р/<span>кг</span></p>
-            <p class="products__name">Сливочноe с ментоловым сиропом</p>
-            <a class="products__link" href="#">Быстрый просмотр</a>
+            <p class="products__price">435 &#8381;<span>/кг</span></p>
+            <a class="products__link" href="#">Сливочноe с ментоловым сиропом</a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
           <li class="products__item">
             <img class="products__image" src="" alt="">
-            <p class="products__price">355 Р/<span>кг</span></p>
-            <p class="products__name">Сливочное с кусочками черного шоколада</p>
-            <a class="products__link" href="#">Быстрый просмотр</a>
+            <p class="products__price">355 &#8381;<span>/кг</span></p>
+            <a class="products__link" href="#">Сливочное с кусочками черного шоколада</a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
           <li class="products__item">
             <img class="products__image" src="" alt="">
-            <p class="products__price">420 Р/<span>кг</span></p>
-            <p class="products__name">Сливочное с мятным сиропом</p>
-            <a class="products__link" href="#">Быстрый просмотр</a>
+            <p class="products__price">420 &#8381;<span>/кг</span></p>
+            <a class="products__link" href="#">Сливочное с мятным сиропом</a>
+            <a class="button products__button" href="#">Быстрый просмотр</a>
           </li>
         </ul>
         <div class="pagination">
           <a class="pagination__prev pagination__prev--disabled" href="#"></a>
-          <ul class="pagination">
+          <ul class="pagination__list">
             <li class="pagination__item">
-              <a class="pagintaion__link pagintaion__link--active" href="#">1</a>
+              <a class="pagination__link pagination__link--active" href="#">1</a>
             </li>
             <li class="pagination__item">
-              <a class="pagintaion__link" href="#">2</a>
+              <a class="pagination__link" href="#">2</a>
             </li>
             <li class="pagination__item">
-              <a class="pagintaion__link" href="#">3</a>
+              <a class="pagination__link" href="#">3</a>
             </li>
             <li class="pagination__item">
-              <a class="pagintaion__link" href="#">4</a>
+              <a class="pagination__link" href="#">4</a>
             </li>
             <li class="pagination__item">
-              <a class="pagintaion__link" href="#">5</a>
+              <a class="pagination__link" href="#">5</a>
             </li>
           </ul>
           <a class="pagination__next" href="#"></a>
@@ -289,7 +289,7 @@
     </main>
     <footer class="page-footer">
       <section class="social">
-        <h2>Мы в социальных сетях</h2>
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link" href="#">
@@ -314,27 +314,28 @@
         </ul>
       </section>
       <section class="legal">
-        <h2>Правовая информация</h2>
+        <h2 class="visually-hidden">Правовая информация</h2>
         <ul class="legal__list">
           <li class="legal__item">
-            <a class="legal__link" href="#">Для поставщиков</a>
+            <a class="link legal__link" href="#">Для поставщиков</a>
           </li>
           <li class="legal__item">
-            <a class="legal__link" href="#">Наши документы</a>
+            <a class="link legal__link" href="#">Наши документы</a>
           </li>
           <li class="legal__item">
-            <a class="legal__link" href="#">О производстве</a>
+            <a class="link legal__link" href="#">О производстве</a>
           </li>
           <li class="legal__item">
-            <a class="legal__link" href="#">Экологические стандарты</a>
+            <a class="link legal__link" href="#">Экологические стандарты</a>
           </li>
         </ul>
       </section>
       <section class="copyright">
+        <h2 class="visually-hidden">Разработчик:</h2>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img class="copyright__logo" src="img/htmlacademy-logo.svg" alt="htmlacademy">
+          <img class="copyright__logo" src="img/htmlacademy-logo.svg" alt="htmlacademy" width="108" height="39">
         </a>
-        <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
+        <p>Сделано в <a class="link copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
       </section>
     </footer>
   </body>
