@@ -197,6 +197,10 @@ img {
 .link-canvas {
   color: var(--basic-dark);
   border-bottom: 1px solid var(--basic-dark-transparent-30);
+
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .link-canvas:hover,
@@ -458,8 +462,8 @@ img {
   padding-bottom: 20px;
   padding-left: 15px;
 
-  /* display: none; */
   background-color: var(--bg-canvas-color);
+  box-shadow: 0px 20px 20px var(--basic-black-transparent-40);
   border-radius: 4px;
 
   box-sizing: border-box;
@@ -810,7 +814,6 @@ img {
 
 
 .promo__offer {
-  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -819,21 +822,22 @@ img {
   padding-bottom: 22px;
   padding-left: 16px;
 
-  width: 560px;
-  height: 229px;
+  border-radius: 16px;
 
   box-sizing: border-box;
 }
 
-.promo__offer img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-
-  border-radius: 16px;
+.promo__offer-left {
+  background-image: url('../img/raspberry-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+.promo__offer-right {
+  background-image: url('../img/chocolate-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .promo__offer h3 {
   margin-top: 0;
@@ -1088,7 +1092,7 @@ img {
 /* features */
 
 .features {
-  margin-top: 30px;
+  margin-top: 29px;
   margin-bottom: 40px;
   padding-top: 24px;
   padding-right: 20px;
@@ -1140,31 +1144,24 @@ img {
 }
 
 .blog {
-  position: relative;
-
-  width: 560px;
-  height: 220px;
-  padding-top: 23px;
+  padding-top: 18px;
   padding-right: 20px;
   padding-bottom: 23px;
   padding-left: 20px;
+
+  background-image: url('../img/strawberry-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
   border-radius: 16px;
   box-sizing: border-box;
 }
 
-.blog img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-
-  border-radius: 16px;
-}
 
 .blog p {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 2px;
 
   font: inherit;
   font-weight: 500;
@@ -1204,7 +1201,10 @@ img {
 }
 
 .subscribe__form {
-  padding-top: 29px;
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-top: 24px;
   padding-right: 20px;
   padding-bottom: 35px;
   padding-left: 20px;
@@ -1218,7 +1218,7 @@ img {
 
 .subscribe__form p {
   margin-top: 0;
-  margin-bottom: 47px;
+  margin-bottom: 41px;
 
   font:inherit;
   font-weight: 400;
@@ -1227,11 +1227,37 @@ img {
   color: var(--basic-dark-light);
 }
 
+.subscribe__form input {
+  flex-grow: 1;
+  margin-right: 10px;
+
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+
+  font:inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+
+  background-color: var(--basic-white);
+  border: 1px solid var(--user-menu-input-border-color);
+  border-radius: 4px;
+
+  box-sizing: border-box;
+}
+
 .subscribe .button {
-  padding-top: 14px;
+  padding-top: 10px;
   padding-right: 19px;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
   padding-left: 19px;
+
+  font: inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
 
   border: none;
 }
