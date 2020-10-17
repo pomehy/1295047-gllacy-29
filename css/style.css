@@ -1281,13 +1281,17 @@ img {
   display: flex;
   flex-direction: column;
   width: 303px;
-  padding-top: 32px;
+  padding-top: 30px;
   padding-right: 25px;
   padding-bottom: 31px;
   padding-left: 25px;
 
   background-color: var(--bg-canvas-color-contacts);
+  border-radius: 16px;
+
+  box-sizing: border-box;
 }
+
 
 .contacts__map {
   position: absolute;
@@ -1298,6 +1302,9 @@ img {
 
 
 .contacts p {
+  margin-top: 0;
+  margin-bottom: 21px;
+
   font: inherit;
   font-weight: 400;
   font-size: 14px;
@@ -1306,30 +1313,33 @@ img {
 }
 
 .contacts span {
+  display: inline-block;
+
   font: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
 }
 
-.contacts__phone {
-  display: inline-block;
-  font: inherit;
+.contacts a[href^="tel:"] {
+  font:inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-dark);
 }
 
-.contacts__phone::after {
-  left: 0;
-}
-
 .contacts__link {
-  padding-top: 13px;
+  margin-top: 5px;
+  padding-top: 10px;
   padding-right: 28px;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
   padding-left: 28px;
+
+  font:inherit;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
 
   text-align: center;
 }
