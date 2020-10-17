@@ -41,7 +41,7 @@
       </nav>
       <div class="user-menu">
         <form class="user-menu__item search" action="#" method="GET">
-          <button class="search__button" type="button" aria-label="Кнопка поиска по сайту">
+          <button class="search__button" type="submit" aria-label="Кнопка поиска по сайту">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 14.6652L11.0785 9.73294C11.9827 8.48188 12.3826 6.93501 12.1984 5.40134C12.0141 3.86767 11.2594 2.4601 10.0848 1.45982C8.91022 0.45954 7.40233 -0.0598191 5.86234 0.00548954C4.32234 0.0707982 2.86363 0.715967 1.77757 1.81212C0.691516 2.90827 0.0580813 4.3747 0.0038002 5.91849C-0.050481 7.46228 0.478388 8.96976 1.48476 10.1398C2.49113 11.3098 3.90092 12.0563 5.43251 12.2301C6.96409 12.4039 8.50472 11.9922 9.74663 11.0772L14.6586 16L16 14.6652ZM6.08152 10.3767C5.24079 10.3767 4.41895 10.1268 3.71991 9.65874C3.02087 9.19063 2.47604 8.5253 2.15431 7.74687C1.83258 6.96844 1.7484 6.11188 1.91241 5.28551C2.07643 4.45913 2.48128 3.70006 3.07576 3.10427C3.67024 2.50849 4.42766 2.10276 5.25223 1.93838C6.0768 1.77401 6.93149 1.85837 7.70822 2.1808C8.48495 2.50324 9.14883 3.04927 9.61591 3.74983C10.083 4.4504 10.3323 5.27404 10.3323 6.11661C10.3298 7.24568 9.88115 8.3278 9.08451 9.12618C8.28788 9.92456 7.20813 10.3742 6.08152 10.3767Z" fill="white"/>
             </svg>
@@ -53,15 +53,15 @@
         </form>
         <div class="user-menu__item login">
           <a class="user-menu__link" href="#">Вход</a>
-          <form class="login__form" method="POST" action="">
-            <label for="login-e-mail">Электронная почта:</label>
+          <form class="login__form" method="POST" action="#">
+            <label class="visually-hidden" for="login-e-mail">Электронная почта:</label>
             <input type="email" id="login-e-mail" placeholder="email@example.com">
-            <label for="login-password">Пароль:</label>
+            <label class="visually-hidden" for="login-password">Пароль:</label>
             <input type="password" placeholder="......">
             <button class="button login__button"type="submit">Войти</button>
             <ul class="login__link-list">
               <li>
-                <a class="link-canvas" href="#">Забыли пароль</a>
+                <a class="link-canvas" href="#">Забыли пароль?</a>
               </li>
               <li>
                 <a class="link-canvas" href="#">Новая регистрация</a>
@@ -127,13 +127,13 @@
         <article class="promo__offer">
           <h3>Малинка даром!</h3>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-          <a class="button promo__link" href="#">Хочу варенье!</a>
+          <a class="button" href="#">Хочу варенье!</a>
           <img src="img/raspberry-bg.jpg" alt="Спелые ягоды малины - вид сверху" width="560" height="229">
         </article>
         <article class="promo__offer">
           <h3>Шоколадки даром!</h3>
           <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-          <a class="button promo__link" href="#">Хочу шоколадки!</a>
+          <a class="button" href="#">Хочу шоколадки!</a>
           <img src="img/chocolate-bg.jpg" alt="Посыпка - вермишель шоколадная" width="560" height="229">
         </article>
       </section>
