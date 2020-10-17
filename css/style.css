@@ -70,7 +70,7 @@
 
   /* inputs */
 
-  --basic-input-text-color: #999999;
+  --basic-input-placeholder-color: #999999;
   --bg-canvas-color-contacts: #d4d4d3;
   --user-menu-input-border-color: #D3D3D2;
   --modal-input-border-color: rgba(178, 178, 178, 0.52);
@@ -266,7 +266,7 @@ img {
 
   position: absolute;
 
-  bottom: 8px;
+  bottom: 5px;
   left: 13px;
 
   width: calc(100% - 26px);
@@ -441,10 +441,63 @@ img {
 
 /* search */
 
+.search {
+  position: relative;
+}
+
 .main-search-wrapper {
+  position: absolute;
+  top: 36px;
+  right: -3px;
+  z-index: 4;
+
   display: none;
+  min-width: 341px;
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+
+  /* display: none; */
   background-color: var(--bg-canvas-color);
   border-radius: 4px;
+
+  box-sizing: border-box;
+}
+
+.search:hover .main-search-wrapper,
+.search:focus-within .main-search-wrapper {
+  display: block;
+}
+
+.search input {
+  width: 100%;
+  padding-top: 12px;
+  padding-right: 15px;
+  padding-bottom: 12px;
+  padding-left: 13px;
+
+  font:inherit;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  background-color: var(--basic-white);
+  border: 1px solid var(--user-menu-input-border-color);
+  border-radius: 4px;
+
+  box-sizing: border-box;
+}
+
+.search input:focus {
+  outline: none;
+  border: 1px solid transparent;
+  box-shadow: inset 0 0 0 2px var(--basic-outline-color);
+}
+
+.search input::placeholder {
+  font:inherit;
+  color: var(--basic-input-placeholder-color);
 }
 
 .search__button {
@@ -603,6 +656,7 @@ img {
 
 .main-header__contacts {
   position: absolute;
+  z-index: 3;
   top: 54px;
   right: 40px;
 
