@@ -925,12 +925,13 @@ img {
   padding-top: 8px;
   padding-bottom: 8px;
 
-  appearance: none;
   background-image: url('../img/decor/arrow-select.svg');
   background-size: auto;
   background-repeat: no-repeat;
   background-position-x: 171px;
   background-position-y: 12px;
+
+  appearance: none;
 }
 
 .filter select:hover {
@@ -954,16 +955,6 @@ img {
   line-height: 16px;
 }
 
-.filter label {
-  padding-left: 31px;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: lowercase;
-}
-
-
 .filter__list {
   display: flex;
   justify-content: space-between;
@@ -974,12 +965,134 @@ img {
   list-style: none;
 }
 
+.filter__list label {
+  padding-left: 31px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: lowercase;
+}
+
 .filter__item {
+  position: relative;
   margin-right: 21px;
 }
 
 .filter__item:last-child {
   margin-right: 0;
+}
+
+.filter__input-checkbox + label::before {
+  content: '';
+
+  position: absolute;
+  left: -2px;
+  top: -1px;
+
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/decor/checkbox-off.svg');
+  background-repeat: no-repeat;
+
+  opacity: 0.8;
+
+}
+
+.filter__input-checkbox:checked + label::before {
+  display: none;
+}
+
+.filter__input-checkbox:checked + label::after {
+  content: '';
+
+  position: absolute;
+  top: -1px;
+  left: -2px;
+
+  width: 24px;
+  height: 20px;
+
+  background-image: url('../img/decor/checkbox-on.svg');
+  background-repeat: no-repeat;
+
+  opacity: 0.8;
+}
+
+.filter__input-checkbox:hover + label::before,
+.filter__input-checkbox:focus + label::before,
+.filter__input-checkbox:hover + label::after,
+.filter__input-checkbox:focus + label::after {
+  opacity: 1;
+}
+
+.filter__input-checkbox:checked:hover + label::before,
+.filter__input-checkbox:checked:hover + label::after {
+  opacity: 1;
+}
+
+.filter__input-checkbox:disabled + label::before,
+.filter__input-checkbox:disabled + label::after {
+  opacity: 0.4;
+}
+
+.filter__input-checkbox:disabled + label,
+.filter__input-radio:disabled + label {
+  cursor: auto;
+}
+
+/* radio */
+
+.filter__input-radio + label::before {
+  content: '';
+
+  position: absolute;
+  left: -1px;
+  top: -1px;
+
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid var(--basic-white-transparent-80);
+  border-radius: 50%;
+
+  box-sizing: border-box;
+}
+
+.filter__input-radio:checked + label::after,
+.filter__input-radio:active + label::after {
+  content: '';
+
+  position: absolute;
+  top: 5px;
+  left: 5px;
+
+  width: 8px;
+  height: 8px;
+
+  background-color: var(--basic-white-transparent-80);
+  border-radius: 50%;
+}
+
+.filter__input-radio:hover + label::before,
+.filter__input-radio:focus + label::before {
+  border-color: var(--basic-white-transparent-80);
+}
+.filter__input-radio:hover + label::after
+.filter__input-radio:focus + label::after {
+  background-color: var(--basic-white);
+}
+
+.filter__input-radio:active + label::before,
+.filter__input-radio:active + label::after {
+  opacity: 1;
+}
+
+.filter__input-radio:disabled + label::before {
+  border-color: var(--basic-white-transparent-40);
+}
+.filter__input-radio:disabled + label::after {
+  background-color: var(--basic-white-transparent-40);
 }
 
 .range {
@@ -1046,17 +1159,34 @@ img {
   left: 13px;
 }
 
+
 .range__toggle--max {
   top: -9px;
   left: 111px;
 }
 
-.range__price label {
-  margin-right: 25px;
+.range-min-price {
+  position: absolute;
+  top: -22px;
+  left: 57px;
 
-  font-family: 'Gilroy', Arial, sans-serif;
-  font-style: normal;
-  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.range-min-price::after {
+  content: '-';
+
+  position: absolute;
+  top: 0;
+  right: -11px;
+}
+
+.range-max-price {
+  position: absolute;
+  top: -22px;
+  left: 110px;
+
   font-size: 14px;
   line-height: 16px;
 }
@@ -1064,19 +1194,31 @@ img {
 .range__price input {
   padding: 0;
 
-  width: 50px;
+  width: 29px;
   font: inherit;
+  color: var(--basic-white);
 
   background-color: transparent;
   border: none;
 }
+
+.range__price input::-webkit-outer-spin-button,
+.range__price input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.range__price input[type=number] {
+  -moz-appearance:textfield;
+}
+
 
 form .filter-topping {
   margin-bottom: 0;
 }
 
 .filter-topping .filter__list {
-  min-width: 711px;
+  min-width: 710px;
 }
 
 
