@@ -1250,12 +1250,19 @@ img {
   border-radius: 16px;
 }
 
-.contacts .container {
-  display: flex;
-  justify-content: flex-end;
+.contacts__map {
+  min-height: 430px;
 }
 
 .contacts-wrapper {
+  position: relative;
+  left: 50%;
+}
+
+.contacts__info {
+  position: absolute;
+  bottom: -153px;
+    right: -573px;
   display: flex;
   flex-direction: column;
   width: 303px;
@@ -1268,14 +1275,6 @@ img {
   border-radius: 16px;
 
   box-sizing: border-box;
-}
-
-
-.contacts__map {
-  position: absolute;
-  height: 430px;
-  top: 0;
-  z-index: -1;
 }
 
 .contacts p {
@@ -1320,6 +1319,8 @@ img {
 
   text-align: center;
 }
+
+
 
 
 /* footer */
