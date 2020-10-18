@@ -50,16 +50,16 @@
           </button>
           <div class="main-search-wrapper">
             <label class="visually-hidden" for="main-search">Поиск по сайту</label>
-            <input type="search" id="main-search" placeholder="Крем-брюле">
+            <input class="form-input" type="search" id="main-search" placeholder="Крем-брюле">
           </div>
         </form>
         <div class="user-menu__item login">
           <a class="user-menu__link" href="#">Вход</a>
           <form class="login__form" method="POST" action="#">
             <label class="visually-hidden" for="login-e-mail">Электронная почта:</label>
-            <input type="email" id="login-e-mail" placeholder="email@example.com">
+            <input class="form-input" type="email" id="login-e-mail" placeholder="email@example.com">
             <label class="visually-hidden" for="login-password">Пароль:</label>
-            <input type="password" placeholder="......">
+            <input class="form-input" type="password" placeholder="......">
             <button class="button login__button"type="submit">Войти</button>
             <ul class="login__link-list">
               <li>
@@ -99,23 +99,23 @@
       </div>
     </header>
     <main class="page-main container">
-      <h1 class="page-main__title">Сливочное мороженное</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item">
           <a class="link breadcrumbs__link" href="index.html">Главное</a>
         </li>
         <li class="breadcrumbs__item">
-          <a class="link breadcrumbs__link" href="catalog.html">Каталог товаров</a>
+          <a class="link breadcrumbs__link" href="catalog.html">Каталог</a>
         </li>
         <li class="breadcrumbs__item">
           <a class="link breadcrumbs__link" href="#">Сливочное</a>
         </li>
       </ul>
+      <h1 class="page-main__title">Сливочное мороженое</h1>
       <section class="filter">
         <form action="#">
           <fieldset>
             <legend>Сортировка:</legend>
-            <select name="sorting" id="filter-sort">
+            <select class="fieldset-style" name="sorting" id="filter-sort">
               <option value="filter-popular">по популярности</option>
               <option value="filter-low-price">сначала недорогие</option>
               <option value="filter-heigh-price">сначала дорогие</option>
@@ -123,14 +123,14 @@
             </select>
           </fieldset>
           <fieldset>
-            <legend>Стоимость</legend>
-            <div class="filter__range range">
+            <legend>Цена: 100 &#8381; – 500 &#8381;</legend>
+            <div class="fieldset-style filter__range range">
               <div class="range__price">
-                <label class="range-min-price">
-                  от <input type="number" name="min-price" value="100 Р">
+                <label class="visually-hidden range-min-price">
+                  от <input type="number" name="min-price" value="100">
                 </label>
-                <label class="range-max-price">
-                  до <input type="number" name="max-price" value="500 Р">
+                <label class="visually-hidden range-max-price">
+                  до <input type="number" name="max-price" value="500">
                 </label>
               </div>
               <div class="range__controls">
@@ -144,47 +144,47 @@
           </fieldset>
           <fieldset class="filter-fat">
             <legend>Жирность:</legend>
-            <ul class="filter__list">
+            <ul class="fieldset-style filter__list">
               <li class="filter__item">
-                <input class="filter__input-radio" type="radio" name="fat-content" value="fat-content-zero" id="filter-fat-content-zero" checked="">
+                <input class="visually-hidden filter__input-radio" type="radio" name="fat-content" value="fat-content-zero" id="filter-fat-content-zero" checked="">
                 <label for="filter-fat-content-zero">0%</label>
               </li>
               <li class="filter__item">
-                <input class="filter__input-radio" type="radio" name="fat-content" value="fat-content-max-10" id="filter-fat-content-max-10">
-                <label for="filter-fat-content-max-10">до 10%</label>
+                <input class="visually-hidden filter__input-radio" type="radio" name="fat-content" value="fat-content-max-10" id="filter-fat-content-max-10">
+                <label for="filter-fat-content-max-10">До 10%</label>
               </li>
               <li class="filter__item">
-                <input class="filter__input-radio" type="radio" name="fat-content" value="fat-content-max-30" id="filter-fat-content-max-30">
-                <label for="filter-fat-content-max-30">до 30%</label>
+                <input class="visually-hidden filter__input-radio" type="radio" name="fat-content" value="fat-content-max-30" id="filter-fat-content-max-30">
+                <label for="filter-fat-content-max-30">До 30%</label>
               </li>
               <li class="filter__item">
-                <input class="filter__input-radio" type="radio" name="fat-content" value="fat-content-min-30" id="filter-fat-content-min-30">
-                <label for="filter-fat-content-min-30">выше 30%</label>
+                <input class="visually-hidden filter__input-radio" type="radio" name="fat-content" value="fat-content-min-30" id="filter-fat-content-min-30">
+                <label for="filter-fat-content-min-30">Выше 30%</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="filter-topping">
             <legend>Наполнители:</legend>
-            <ul class="filter__list">
+            <ul class="fieldset-style filter__list">
               <li class="filter__item">
-                <input class="filter__input-checkbox" type="checkbox" name="topping-chocolate" id="filter-topping-chocolate" checked="">
+                <input class="visually-hidden filter__input-checkbox" type="checkbox" name="topping-chocolate" id="filter-topping-chocolate" checked="">
                 <label for="filter-topping-chocolate">Шоколадные</label>
               </li>
               <li class="filter__item">
-                <input class="filter__input-checkbox" type="checkbox" name="topping-sugar" id="filter-topping-sugar" checked="">
+                <input class="visually-hidden filter__input-checkbox" type="checkbox" name="topping-sugar" id="filter-topping-sugar" checked="">
                 <label for="filter-topping-sugar">Сахарные присыпки</label>
               </li>
               <li class="filter__item">
-                <input class="filter__input-checkbox" type="checkbox" name="topping-fruits" id="filter-topping-fruits">
-                <label for="filter-topping-fruits">Фркуты</label>
+                <input class="visually-hidden filter__input-checkbox" type="checkbox" name="topping-fruits" id="filter-topping-fruits">
+                <label for="filter-topping-fruits">Фрукты</label>
               </li>
               <li class="filter__item">
-                <input class="filter__input-checkbox" type="checkbox" name="topping-syrup" id="filter-topping-syrup">
+                <input class="visually-hidden filter__input-checkbox" type="checkbox" name="topping-syrup" id="filter-topping-syrup">
                 <label for="filter-topping-syrup">Сиропы</label>
               </li>
               <li class="filter__item">
-                <input class="filter__input-checkbox" type="checkbox" name="topping-jam" id="filter-topping-jam">
-                <label for="filter-topping-jam">Джем</label>
+                <input class="visually-hidden filter__input-checkbox" type="checkbox" name="topping-jam" id="filter-topping-jam">
+                <label for="filter-topping-jam">Джемы</label>
               </li>
             </ul>
           </fieldset>
