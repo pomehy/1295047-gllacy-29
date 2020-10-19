@@ -147,6 +147,7 @@ img {
   box-sizing: border-box;
 }
 
+
 /* container */
 
 .container {
@@ -432,6 +433,10 @@ img {
   background-color: transparent;
 }
 
+.sub-menu__link--active{
+  background-color: var(--main-nav-current-color);
+}
+
 .sub-menu__link:hover,
 .sub-menu__link:focus {
   background-color: var(--submenu-hover-link-color);
@@ -443,6 +448,7 @@ img {
 
 .sub-menu__link--active {
   background-color: var(--main-nav-current-color);
+  color: var(--basic-white);
 }
 
 /* user-menu */
@@ -465,6 +471,7 @@ img {
 }
 
 .user-menu__link {
+  position: relative;
   display: flex;
 
   padding-top: 8px;
@@ -553,6 +560,17 @@ img {
   position: relative;
 }
 
+.login svg {
+  position: absolute;
+  top: 6px;
+  left: 18px;
+}
+
+.login:hover path,
+.login:focus path {
+  fill: var(--basic-dark);
+}
+
 .login:hover .login__form,
 .login:focus-within .login__form {
   display: flex;
@@ -632,6 +650,31 @@ img {
 
 .cart {
   position: relative;
+}
+
+.cart svg {
+  position: absolute;
+  left: 18px;
+  top: 6px;
+}
+
+.cart:hover path,
+.cart:focus path {
+  fill: var(--basic-dark);
+}
+
+.cart:hover .cart-icon-bg,
+.cart:focus .cart-icon-bg {
+  fill: none;
+}
+
+.cart--active .cart-icon-bg {
+  fill: var(--hover-active-canvas-link-color);
+}
+
+.cart--active:hover .cart-icon-bg,
+.cart--active:focus .cart-icon-bg {
+  fill: var(--hover-active-canvas-link-color);
 }
 
 .cart-wrapper {
@@ -1052,6 +1095,10 @@ img {
   appearance: none;
 }
 
+select option {
+
+}
+
 .filter select:hover {
   color: var(--basic-dark);
   background-color: var(--basic-white);
@@ -1093,6 +1140,8 @@ img {
 
   cursor:  url('../img/decor/hand-cursor-pointer.svg'), pointer;
 }
+
+
 
 .filter__item {
   position: relative;
@@ -1140,11 +1189,18 @@ img {
 }
 
 .filter__input-checkbox:hover + label::before,
-.filter__input-checkbox:focus + label::before,
-.filter__input-checkbox:hover + label::after,
-.filter__input-checkbox:focus + label::after {
+.filter__input-checkbox:hover + label::after {
   opacity: 1;
 }
+
+
+.filter__input-checkbox:focus + label::before,
+.filter__input-checkbox:focus + label::after {
+  opacity: 1;
+  outline: 2px solid var(--basic-black);
+}
+
+
 
 .filter__input-checkbox:checked:hover + label::before,
 .filter__input-checkbox:checked:hover + label::after {
@@ -1194,14 +1250,25 @@ img {
   border-radius: 50%;
 }
 
-.filter__input-radio:hover + label::before,
-.filter__input-radio:focus + label::before {
+.filter__input-radio:hover + label::before {
   border-color: var(--basic-white-transparent-80);
 }
+
+.filter__input-radio:focus + label::before {
+  border-color: var(--basic-white-transparent-80);
+  outline: 2px solid var(--basic-black);
+}
+
 .filter__input-radio:hover + label::after
 .filter__input-radio:focus + label::after {
   background-color: var(--basic-white);
 }
+
+.filter__input-radio:focus + label::before {
+  border-color: var(--basic-white-transparent-80);
+  outline: 2px solid var(--basic-black);
+}
+
 
 .filter__input-radio:active + label::before,
 .filter__input-radio:active + label::after {
@@ -1410,7 +1477,7 @@ form .filter-topping {
 }
 
 .products__item:hover,
-.products__item:focus {
+.products__item:focus-within {
   z-index: 3;
 }
 
@@ -1435,7 +1502,8 @@ form .filter-topping {
 }
 
 
-.products__item:hover::before {
+.products__item:hover::before,
+.products__item:focus-within::before {
   display: block;
   z-index: -1;
 }
@@ -1483,7 +1551,6 @@ form .filter-topping {
   bottom: -55px;
   left: 0;
 
-  display: none;
   width: 200px;
   margin-right: auto;
   margin-left: auto;
@@ -1492,7 +1559,7 @@ form .filter-topping {
   padding-bottom: 9px;
   padding-left: 16px;
 
-
+  display: none;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -1506,7 +1573,8 @@ form .filter-topping {
   box-sizing: border-box;
 }
 
-.products__item:hover .products__button {
+.products__item:hover .products__button,
+.products__item:focus-within .products__button {
   display: block;
 }
 
