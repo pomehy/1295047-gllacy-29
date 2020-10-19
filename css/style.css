@@ -956,13 +956,13 @@ img {
 }
 
 .promo__offer-left {
-  background-image: url('../img/raspberry-bg.jpg');
+  background-image: url('../img/raspberry-promo-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .promo__offer-right {
-  background-image: url('../img/chocolate-bg.jpg');
+  background-image: url('../img/chocolate-promo-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
