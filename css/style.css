@@ -97,11 +97,16 @@
 
   --hover-active-canvas-link-color: #E84D37;
   --hover-active-canvas-link-color-transparent-30: rgb(232, 77, 55, 0.3);
+
   /* background */
   --basic-bg-olive: #849D8F;
+  --basic-blur-olive : rgba(215, 242, 227, 0.75);
+
   --basic-bg-silvergrey: #8996A6;
   --basic-bg-coffee: #9D8B84;
   --bg-wafer-pattern: #f0e5ce;
+
+  --basic-blur-color : rgba(215, 242, 227, 0.75);
 }
 
 
@@ -852,6 +857,24 @@ img {
   display: none;
 
   height: 564px;
+}
+
+.slider__item::before {
+  content: '';
+
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  z-index: -2;
+
+  width: 716px;
+  height: 716px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: var(--basic-blur-olive);
+  filter: blur(250px);
 }
 
 .slider__item--active {
