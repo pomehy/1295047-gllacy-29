@@ -979,12 +979,35 @@ img {
 }
 
 .breadcrumbs__item {
+  position: relative;
   margin-right: 22px;
+}
+
+.breadcrumbs__item::after {
+  content: '';
+
+  position: absolute;
+  top: -1px;
+  bottom: 0;
+
+  right: -15px;
+  width: 6px;
+  height: 6px;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  background-image: url('../img/decor/arrows-breadcrumbs.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .breadcrumbs__item:last-child {
   margin-right: 0;
 }
+.breadcrumbs__item:last-child::after {
+  display: none;
+}
+
 
 .breadcrumbs__link {
   display: flex;
