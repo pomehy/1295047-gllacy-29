@@ -1345,12 +1345,17 @@ select option {
   border-radius: 50%;
 }
 
+.filter__input-radio:checked + label:hover::after,
+.filter__input-radio:active + label:hover::after {
+  background-color: var(--basic-white);
+}
+
 .filter__input-radio:hover + label::before {
-  border-color: var(--basic-white-transparent-80);
+  border-color: var(--basic-white);
 }
 
 .filter__input-radio:focus + label::before {
-  border-color: var(--basic-white-transparent-80);
+  border-color: var(--basic-white);
   outline: 2px solid var(--basic-black);
 }
 
@@ -1360,7 +1365,7 @@ select option {
 }
 
 .filter__input-radio:focus + label::before {
-  border-color: var(--basic-white-transparent-80);
+  border-color: var(--basic-white);
   outline: 2px solid var(--basic-black);
 }
 
