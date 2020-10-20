@@ -531,7 +531,8 @@ img {
 }
 
 .user-menu__link:hover,
-.user-menu__link:focus {
+.user-menu__link:focus,
+.user-menu__link:focus-within {
   background-color: var(--basic-white);
   color: var(--basic-dark);
 }
@@ -608,7 +609,8 @@ img {
 }
 
 .login:hover path,
-.login:focus path {
+.login:focus path,
+.login:focus-within path {
   fill: var(--basic-dark);
 }
 
@@ -671,6 +673,8 @@ img {
 }
 
 .login__button {
+  align-self: center;
+
   padding-top: 14px;
   padding-right: 26px;
   padding-bottom: 14px;
@@ -700,7 +704,8 @@ img {
 }
 
 .cart:hover path,
-.cart:focus path {
+.cart:focus path,
+.cart:focus-within path {
   fill: var(--basic-dark);
 }
 
@@ -1100,6 +1105,7 @@ img {
 .promo__offer {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   padding-top: 14px;
   padding-right: 22px;
@@ -1530,6 +1536,7 @@ form .filter-topping {
 .filter__button {
   align-self: flex-end;
 
+  margin-top: 20px;
   padding-top: 7px;
   padding-right: 29px;
   padding-bottom: 7px;
@@ -1610,7 +1617,7 @@ form .filter-topping {
   display: none;
 
   width: 293px;
-  min-height: 402px;
+  min-height: calc(100% + 82px);
 
   background-color: var(--basic-white-transparent-20);
 
@@ -1950,7 +1957,7 @@ form .filter-topping {
   padding-bottom: 5px;
   padding-left: 6px;
   width: 560px;
-  height: 220px;
+  min-height: 220px;
 
   background-color: var(--bg-canvas-color);
   background-image: url(../img/post-pattern.jpg);
