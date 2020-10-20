@@ -1531,6 +1531,21 @@ form .filter-topping {
   z-index: -1;
 }
 
+.products__item--hit::after {
+  content: '';
+
+  position: absolute;
+  top: 0;
+
+
+  width: 61px;
+  height: 61px;
+
+  background-image: url('../img/decor/product-hit.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .products__image {
   border-radius: 50%;
 }
