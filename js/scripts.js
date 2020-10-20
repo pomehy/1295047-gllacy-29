@@ -30,6 +30,7 @@ try {
 writeUsLink.addEventListener('click', function(evt) {
   evt.preventDefault();
   writeUsModal.classList.add('modal-show');
+  writeUsForm.classList.remove('modal-error');
   if (storageUserName) {
     userName.value = storageUserName;
     userEmail.focus();
@@ -54,12 +55,12 @@ writeUsForm.addEventListener('submit', function(evt) {
 writeUsClose.addEventListener('click', function(evt) {
   evt.preventDefault();
   writeUsModal.classList.remove('modal-show');
-  writeUsModal.classList.remove('modal-error');
+  writeUsForm.classList.remove('modal-error');
 });
 
 overlay.addEventListener('click', function() {
   writeUsModal.classList.remove('modal-show');
-  writeUsModal.classList.remove('modal-error');
+  writeUsForm.classList.remove('modal-error');
 });
 
 
@@ -71,7 +72,7 @@ window.addEventListener('keydown', function (evt) {
     } else if (writeUsModal.classList.contains('modal-show')) {
       evt.preventDefault();
       writeUsModal.classList.remove('modal-show');
-      writeUsModal.classList.remove('modal-error');
+      writeUsForm.classList.remove('modal-error');
     }
   }
 });
