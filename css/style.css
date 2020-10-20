@@ -2116,14 +2116,6 @@ form .filter-topping {
   margin-top: 5px;
 }
 
-
-.legal__item:first-child .legal__link {
-  font:inherit;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 18px;
-}
-
 .legal__link {
   position: relative;
 
@@ -2132,6 +2124,28 @@ form .filter-topping {
   font-size: 13px;
   line-height: 18px;
   color: var(--basic-white);
+}
+
+
+.legal__item:first-child .legal__link {
+  font:inherit;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+
+.legal__item:first-child .legal__link::before {
+  content: '';
+
+  position: absolute;
+  top: 5px;
+  left: -20px;
+
+  width: 15px;
+  height: 13px;
+
+  background-image: url('../img/decor/heart-icon.svg');
 }
 
 /* copyright */
