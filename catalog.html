@@ -61,8 +61,8 @@
             <label class="visually-hidden" for="login-e-mail">Электронная почта:</label>
             <input class="form-input" type="email" id="login-e-mail" placeholder="email@example.com">
             <label class="visually-hidden" for="login-password">Пароль:</label>
-            <input class="form-input" type="password" placeholder="......">
-            <button class="button login__button"type="submit">Войти</button>
+            <input class="form-input" type="password" id="login-password" placeholder="......">
+            <button class="button login__button" type="submit">Войти</button>
             <ul class="login__link-list">
               <li>
                 <a class="link-canvas" href="#">Забыли пароль?</a>
@@ -124,6 +124,7 @@
       </ul>
       <h1 class="page-main__title">Сливочное мороженое</h1>
       <section class="filter">
+        <h2 class="visually-hidden">Фильтр товаров</h2>
         <form method="GET" action="https://echo.htmlacademy.ru" target="_blank">
           <fieldset>
             <legend>Сортировка:</legend>
@@ -204,6 +205,7 @@
         </form>
       </section>
       <section class="products">
+        <h2 class="visually-hidden">Отсортированные товары из каталога</h2>
         <ul class="products__list">
           <li class="products__item">
             <img class="products__image" src="img/product-1.jpg" alt="Мороженное яркожелтого цвета" width="267" height="267">
