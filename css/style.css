@@ -988,7 +988,7 @@ img {
   margin-right: 0;
 }
 
-.sldier__button {
+.slider__button {
   width: 21px;
   height: 21px;
 
@@ -1002,7 +1002,7 @@ img {
   box-sizing: border-box;
 }
 
-.sldier__button--active {
+.slider__button--active {
   background-color: var(--basic-white);
 }
 
@@ -2263,6 +2263,10 @@ form .filter-topping {
 
 .modal {
   position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
   top: 0;
   right: 0;
   bottom: 0;
@@ -2274,13 +2278,18 @@ form .filter-topping {
 
 .modal-show {
   display: block;
-  animation: bounce 0.6s;
+  animation: fade 0.6s;
+}
+
+.modal-error {
+  animation: shadow 0.6s;
 }
 
 .overlay {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  display: flex;
+  width: 100%;
+  height: 100%;
 
   background-color: var(--basic-black-transparent-30);
 }
@@ -2406,20 +2415,49 @@ form .filter-topping {
 }
 
 
-@keyframes bounce {
+@keyframes fade {
   0% {
-    transform: translateY(-2000px);
-  }
-
-  70% {
-    transform: translateY(30px);
-  }
-
-  90% {
-    transform: translateY(-10px);
+    opacity: 0;
   }
 
   100% {
-    transform: translateY(0);
+    opacity: 1;
   }
 }
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shadow {
+  0%  {
+    box-shadow: 0 0 5px transparent;
+  }
+
+  50% {
+    box-shadow: 0 0 15px 5px var(--basic-red);
+  }
+
+  100% {
+    box-shadow: 0 0 5px transparent;
+  }
+}
+
