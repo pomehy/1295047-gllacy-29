@@ -103,10 +103,12 @@
   --basic-blur-olive : rgba(215, 242, 227, 0.75);
 
   --basic-bg-silvergrey: #8996A6;
-  --basic-bg-coffee: #9D8B84;
-  --bg-wafer-pattern: #f0e5ce;
+  --basic-blur-silvergrey : rgba(218, 228, 239, 0.75);
 
-  --basic-blur-color : rgba(215, 242, 227, 0.75);
+  --basic-bg-coffee: #9D8B84;
+  --basic-blur-coffee : rgba(239, 224, 218, 0.75);
+
+  --bg-wafer-pattern: #f0e5ce;
 }
 
 
@@ -259,6 +261,22 @@ img {
 
 .page-body {
   padding-top: 7px;
+}
+
+.page-body.bg-silvergrey {
+  background-color: var(--basic-bg-silvergrey);
+}
+
+.bg-silvergrey .slider__item::before {
+  background-color: var(--basic-blur-silvergrey);
+}
+
+.page-body.bg-coffee {
+  background-color: var(--basic-bg-coffee);
+}
+
+.bg-coffee .slider__item::before {
+  background-color: var(--basic-blur-coffee);
 }
 
 
