@@ -117,7 +117,7 @@
         </ul>
         <ul class="slider__controls">
           <li>
-            <button class="sldier__button"></button>
+            <button class="sldier__button sldier__button--active"></button>
           </li>
           <li>
             <button class="sldier__button"></button>
@@ -277,5 +277,28 @@
         <p>Сделано в <a class="link copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2019</p>
       </section>
     </footer>
+
+    <section class="modal write-us">
+      <h2 class="visually-hidden">Связаться с нами</h2>
+      <div class="overlay">
+        <form class="write-us__form" method="POST" action="https://echo.htmlacademy.ru">
+          <p>Мы обязательно вам ответим!</p>
+
+            <label class="visually-hidden" for="write-us-name">Ваше имя:</label>
+            <input type="text" name="user-name" id="write-us-name" placeholder="Имя Фамилия" autofocus>
+
+
+            <label class="visually-hidden" for="write-us-mail">Ваш e-mail:</label>
+            <input type="email" name="user-email" id="write-us-mail" placeholder="email@example.com">
+
+
+            <label class="visually-hidden" for="write-us-text">Текст письма</label>
+            <textarea name="user-text" id="write-us-text" placeholder="В свободной форме"></textarea>
+
+          <button class="button write-us__button" type="submit">Отправить</button>
+          <button class="close-modal write-us--close" type="button" aria-label="Закрыть"></button>
+        </form>
+      </div>
+    </section>
   </body>
 </html>
