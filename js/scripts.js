@@ -9,6 +9,11 @@ const writeUsModal = document.querySelector('.write-us');
 const writeUsClose = document.querySelector('.write-us--close');
 const overlay = document.querySelector('.overlay');
 
+const subscribeForm = document.querySelector('.subscribe__form');
+const subscribeInput = subscribeForm.querySelector('input');
+const subscribeEmail = subscribeForm.querySelector('[name=subscribe-email]');
+const subscribeButton = subscribeForm.querySelector('button');
+
 const userName = writeUsModal.querySelector('[name=user-name]');
 const userEmail = writeUsModal.querySelector('[name=user-email]');
 const userText = writeUsModal.querySelector('[name=user-text]');
@@ -36,6 +41,16 @@ writeUsLink.addEventListener('click', function(evt) {
     userEmail.focus();
   } else {
     userName.focus();
+  }
+});
+
+
+subscribeForm.addEventListener('submit', function(evt) {
+  if (!subscribeEmail.value) {
+    evt.preventDefault();
+    subscribeForm.classList.remove('modal-error');
+    subscribeForm.offsetWidth = subscribeForm.offsetWidth;
+    subscribeForm.classList.add('modal-error');
   }
 });
 
