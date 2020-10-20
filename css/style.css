@@ -267,12 +267,22 @@ img {
   padding-top: 7px;
 }
 
+.page-body .slider__item--active {
+  animation: fade 0.4s;
+  z-index: -1;
+}
+
 .page-body.bg-silvergrey {
   background-color: var(--basic-bg-silvergrey);
 }
 
 .bg-silvergrey .slider__item::before {
   background-color: var(--basic-blur-silvergrey);
+}
+
+.bg-silvergrey .slider__item--active {
+  animation: fade 0.4s;
+  z-index: -1;
 }
 
 .page-body.bg-coffee {
@@ -283,6 +293,10 @@ img {
   background-color: var(--basic-blur-coffee);
 }
 
+.bg-coffee .slider__item--active {
+  animation: fade 0.4s;
+  z-index: -1;
+}
 
 .page-header {
   position: relative;
@@ -2417,7 +2431,7 @@ form .filter-topping {
 
 @keyframes fade {
   0% {
-    opacity: 0;
+    opacity: 0.5;
   }
 
   100% {
