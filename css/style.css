@@ -2025,7 +2025,10 @@ form .filter-topping {
 }
 
 .contacts__map {
+  width: 100%;
   min-height: 430px;
+
+  border: none;
 }
 
 .contacts-wrapper {
