@@ -2106,7 +2106,7 @@ form .filter-topping {
   content: '';
 
   position: absolute;
-  top: 5px;
+  top: 3px;
   left: -20px;
 
   width: 15px;
