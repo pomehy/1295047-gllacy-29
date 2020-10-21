@@ -1000,6 +1000,11 @@ img {
 .breadcrumbs__item:last-child {
   margin-right: 0;
 }
+
+.breadcrumbs__item:last-child .breadcrumbs__link {
+  border: none;
+}
+
 .breadcrumbs__item:last-child::after {
   display: none;
 }
