@@ -128,7 +128,7 @@ sliderButtons[2].addEventListener('click', function(evt) {
   sliderButtons[0].classList.remove('slider__button--active');
   sliderButtons[1].classList.remove('slider__button--active');
 
-  if (pageBody.classList.contains('bg-silvergrey')) {
+  if (pageBody.classList.contains('bg-silvergrey') || !pageBody.classList.contains('bg-coffee')) {
     pageBody.classList.remove('bg-silvergrey');
     pageBody.classList.add('bg-coffee');
   }
