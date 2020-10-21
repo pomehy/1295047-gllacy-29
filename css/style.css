@@ -1,32 +1,28 @@
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
+  font-family: "Roboto";
+  src: url("../fonts/roboto.woff2") format("woff2"),
+    url("../fonts/roboto.woff") format("woff");
   font-weight: 400;
-  src: local('Roboto'), local('Roboto'),
-       url('../fonts/roboto.woff2') format('woff2'),
-       url('../fonts/roboto.woff') format('woff');
-  font-display: swap;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Roboto Medium'), local('Roboto-Medium'),
-       url('../fonts/robotomedium.woff2') format('woff2'),
-       url('../fonts/robotomedium.woff') format('woff');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
+  font-family: "Roboto";
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+    url("../fonts/robotobold.woff") format("woff");
   font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'),
-       url('../fonts/robotobold.woff2') format('woff2'),
-       url('../fonts/robotobold.woff') format('woff');
-  font-display: swap;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+    url("../fonts/robotomedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+
 
 :root {
   --basic-black: #000000;
@@ -101,7 +97,6 @@ body {
   text-decoration: none;
   cursor:  url('../img/decor/hand-cursor-pointer.svg'), pointer;
 }
-
 
 img {
   max-width: 100%;
@@ -401,7 +396,6 @@ img {
 
   background-color: var(--basic-dark-transparent-20);
 }
-
 
 .sub-menu__link {
   display: flex;
@@ -731,7 +725,6 @@ img {
   cursor:  url('../img/decor/hand-cursor-pointer.svg'), pointer;
 }
 
-
 .cart-product__image {
   margin-top: 4px;
   border-radius: 50%;
@@ -746,7 +739,6 @@ img {
 .cart-product span {
   color: var(--basic-color-price-cart);
 }
-
 
 .cart-product__title {
   width: 216px;
@@ -840,6 +832,8 @@ img {
   margin-right: auto;
 
   background: var(--basic-blur-olive);
+  border-radius: 50%;
+
   filter: blur(250px);
 }
 
@@ -940,6 +934,20 @@ img {
   cursor:  url('../img/decor/hand-cursor-pointer.svg'), pointer;
 
   box-sizing: border-box;
+}
+
+.slider__button:hover {
+  background-color: var(--basic-white-transparent-40);
+}
+
+.slider__button:focus {
+  outline: none;
+  border: 1px solid transparent;
+  box-shadow: 0 0 0 2px var(--basic-outline-color);
+}
+
+.slider__button:active {
+  background-color: var(--basic-white);
 }
 
 .slider__button--active {
@@ -1216,8 +1224,7 @@ img {
 
 .filter__input-checkbox:focus + label::before,
 .filter__input-checkbox:focus + label::after {
-  opacity: 1;
-  outline: 2px solid var(--basic-black);
+  box-shadow: 0 0 0 2px var(--basic-outline-color);
 }
 
 .filter__input-checkbox:checked:hover + label::before,
@@ -1275,19 +1282,13 @@ img {
   border-color: var(--basic-white);
 }
 
-.filter__input-radio:focus + label::before {
-  border-color: var(--basic-white);
-  outline: 2px solid var(--basic-black);
-}
-
 .filter__input-radio:hover + label::after
 .filter__input-radio:focus + label::after {
   background-color: var(--basic-white);
 }
 
 .filter__input-radio:focus + label::before {
-  border-color: var(--basic-white);
-  outline: 2px solid var(--basic-black);
+  box-shadow: 0 0 0 2px var(--basic-outline-color);
 }
 
 .filter__input-radio:active + label::before,
@@ -1535,6 +1536,7 @@ form .filter-topping {
 }
 
 .products__image {
+  margin-bottom: 8px;
   border-radius: 50%;
 }
 
@@ -1559,8 +1561,8 @@ form .filter-topping {
 }
 
 .products-link-wrapper {
-  margin-top: 5px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: -3px;
 
   font-weight: 500;
   font-size: 16px;
@@ -2106,6 +2108,13 @@ form .filter-topping {
   height: 13px;
 
   background-image: url('../img/decor/heart-icon.svg');
+}
+
+.legal__link:hover.legal__link::before {
+  background-image: url('../img/decor/heart-color-icon.svg');
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .copyright {
