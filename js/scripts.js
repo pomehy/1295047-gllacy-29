@@ -1,19 +1,25 @@
 const pageBody = document.querySelector('.page-body');
 const sliderItems = document.querySelectorAll('.slider__item');
 const sliderButtons = document.querySelectorAll('.slider__button');
+let sliderControls = document.querySelector('.slider__controls');
+
 const writeUsLink = document.querySelector('.contacts__link');
 const writeUsModal = document.querySelector('.write-us');
 const writeUsClose = document.querySelector('.write-us--close');
 const overlay = document.querySelector('.overlay');
+
 const subscribeForm = document.querySelector('.subscribe__form');
 const subscribeInput = subscribeForm.querySelector('input');
 const subscribeEmail = subscribeForm.querySelector('[name=subscribe-email]');
 const subscribeButton = subscribeForm.querySelector('button');
+
 const userName = writeUsModal.querySelector('[name=user-name]');
 const userEmail = writeUsModal.querySelector('[name=user-email]');
 const userText = writeUsModal.querySelector('[name=user-text]');
+
 const writeUsForm = writeUsModal.querySelector('form');
 const storageUserName = localStorage.getItem('user-name');
+
 const isStorageSupport = true;
 let storage = '';
 
