@@ -924,6 +924,7 @@ img {
 }
 
 .slider__button {
+  display: block;
   width: 21px;
   height: 21px;
 
@@ -2110,7 +2111,8 @@ form .filter-topping {
   background-image: url('../img/decor/heart-icon.svg');
 }
 
-.legal__link:hover.legal__link::before {
+.legal__link:hover.legal__link::before,
+.legal__link:focus.legal__link::before {
   background-image: url('../img/decor/heart-color-icon.svg');
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
