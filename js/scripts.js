@@ -2,24 +2,19 @@ const pageBody = document.querySelector('.page-body');
 const sliderItems = document.querySelectorAll('.slider__item');
 const sliderButtons = document.querySelectorAll('.slider__button');
 let sliderControls = document.querySelector('.slider__controls');
-
 const writeUsLink = document.querySelector('.contacts__link');
 const writeUsModal = document.querySelector('.write-us');
 const writeUsClose = document.querySelector('.write-us--close');
 const overlay = document.querySelector('.overlay');
-
 const subscribeForm = document.querySelector('.subscribe__form');
 const subscribeInput = subscribeForm.querySelector('input');
 const subscribeEmail = subscribeForm.querySelector('[name=subscribe-email]');
 const subscribeButton = subscribeForm.querySelector('button');
-
 const userName = writeUsModal.querySelector('[name=user-name]');
 const userEmail = writeUsModal.querySelector('[name=user-email]');
 const userText = writeUsModal.querySelector('[name=user-text]');
-
 const writeUsForm = writeUsModal.querySelector('form');
 const storageUserName = localStorage.getItem('user-name');
-
 const isStorageSupport = true;
 let storage = '';
 
@@ -32,7 +27,7 @@ try {
 writeUsLink.addEventListener('click', function(evt) {
   evt.preventDefault();
   writeUsModal.classList.add('modal-show');
-  writeUsForm.classList.remove('modal-error');
+  writeUsForm.classList.remove('submit-error');
   if (storageUserName) {
     userName.value = storageUserName;
     userEmail.focus();
@@ -44,18 +39,18 @@ writeUsLink.addEventListener('click', function(evt) {
 subscribeForm.addEventListener('submit', function(evt) {
   if (!subscribeEmail.value) {
     evt.preventDefault();
-    subscribeForm.classList.remove('modal-error');
+    subscribeForm.classList.remove('submit-error');
     subscribeForm.offsetWidth = subscribeForm.offsetWidth;
-    subscribeForm.classList.add('modal-error');
+    subscribeForm.classList.add('submit-error');
   }
 });
 
 writeUsForm.addEventListener('submit', function(evt) {
   if (!userName.value || !userEmail.value || !userText.value) {
     evt.preventDefault();
-    writeUsForm.classList.remove('modal-error');
+    writeUsForm.classList.remove('submit-error');
     writeUsForm.offsetWidth = writeUsForm.offsetWidth;
-    writeUsForm.classList.add('modal-error');
+    writeUsForm.classList.add('submit-error');
   } else {
     if (isStorageSupport) {
       localStorage.setItem('user-name', userName.value);
@@ -66,12 +61,12 @@ writeUsForm.addEventListener('submit', function(evt) {
 writeUsClose.addEventListener('click', function(evt) {
   evt.preventDefault();
   writeUsModal.classList.remove('modal-show');
-  writeUsForm.classList.remove('modal-error');
+  writeUsForm.classList.remove('submit-error');
 });
 
 overlay.addEventListener('click', function() {
   writeUsModal.classList.remove('modal-show');
-  writeUsForm.classList.remove('modal-error');
+  writeUsForm.classList.remove('submit-error');
 });
 
 window.addEventListener('keydown', function (evt) {
@@ -82,7 +77,7 @@ window.addEventListener('keydown', function (evt) {
     } else if (writeUsModal.classList.contains('modal-show')) {
       evt.preventDefault();
       writeUsModal.classList.remove('modal-show');
-      writeUsForm.classList.remove('modal-error');
+      writeUsForm.classList.remove('submit-error');
     }
   }
 });
