@@ -4,14 +4,7 @@
     url("../fonts/roboto.woff") format("woff");
   font-weight: 400;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Roboto";
-  src: url("../fonts/robotobold.woff2") format("woff2"),
-    url("../fonts/robotobold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -20,9 +13,17 @@
     url("../fonts/robotomedium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
-
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+    url("../fonts/robotobold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --basic-black: #000000;
