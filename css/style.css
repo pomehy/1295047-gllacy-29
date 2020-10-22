@@ -123,8 +123,8 @@ img {
 .container {
   width: 1146px;
   margin: 0 auto;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: 27px;
+  padding-left: 27px;
 }
 
 .button {
@@ -478,7 +478,7 @@ img {
 .main-search-wrapper {
   position: absolute;
   top: 36px;
-  right: -3px;
+  right: 0;
   z-index: 4;
 
   display: none;
@@ -787,7 +787,7 @@ img {
   position: absolute;
   z-index: 3;
   top: 54px;
-  right: 40px;
+  right: 27px;
 
   text-align: end;
 }
