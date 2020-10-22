@@ -1950,7 +1950,7 @@ form .filter-topping {
   line-height: 24px;
 }
 
-.contacts a[href^="tel:"] {
+.contacts a[href^='tel:'] {
   font:inherit;
   font-weight: 700;
   font-size: 18px;
