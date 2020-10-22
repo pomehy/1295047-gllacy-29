@@ -152,9 +152,6 @@ img {
 .link {
   color: var(--basic-white);
   border-bottom: 1px solid var(--basic-white-transparent-30);
-
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -168,9 +165,6 @@ img {
 .link-canvas {
   color: var(--basic-dark);
   border-bottom: 1px solid var(--basic-dark-transparent-30);
-
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -196,6 +190,16 @@ img {
   box-sizing: border-box;
 }
 
+.form-input::-webkit-input-placeholder {
+  font-weight: 400;
+  color: var(--input-placeholder-color);
+}
+
+.form-input::-moz-placeholder {
+  font-weight: 400;
+  color: var(--input-placeholder-color);
+}
+
 .form-input::placeholder {
   font-weight: 400;
   color: var(--input-placeholder-color);
@@ -217,7 +221,8 @@ img {
 }
 
 .page-body .slider__item--active {
-  animation: fade 0.4s;
+  -webkit-animation: fade 0.4s;
+          animation: fade 0.4s;
 }
 
 .page-body.bg-silvergrey {
@@ -229,7 +234,8 @@ img {
 }
 
 .bg-silvergrey .slider__item--active {
-  animation: fade 0.4s;
+  -webkit-animation: fade 0.4s;
+          animation: fade 0.4s;
 }
 
 .page-body.bg-coffee {
@@ -241,13 +247,15 @@ img {
 }
 
 .bg-coffee .slider__item--active {
-  animation: fade 0.4s;
+  -webkit-animation: fade 0.4s;
+          animation: fade 0.4s;
 }
 
 .page-header {
   position: relative;
 
   display: grid;
+  grid-template-columns: -webkit-max-content auto auto;
   grid-template-columns: max-content auto auto;
   align-items: center;
 }
@@ -835,7 +843,9 @@ img {
   background: var(--basic-blur-olive);
   border-radius: 50%;
 
-  filter: blur(250px);
+  -webkit-filter: blur(250px);
+
+          filter: blur(250px);
 }
 
 .slider__item--active {
@@ -1134,7 +1144,11 @@ img {
   background-position-x: 171px;
   background-position-y: 12px;
 
-  appearance: none;
+  -webkit-appearance: none;
+
+     -moz-appearance: none;
+
+          appearance: none;
 }
 
 .filter select:hover {
@@ -1483,7 +1497,8 @@ form .filter-topping {
 .products__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 26px;
+  -moz-column-gap: 26px;
+       column-gap: 26px;
   row-gap: 40px;
 
   margin: 0;
@@ -1736,7 +1751,8 @@ form .filter-topping {
 .features__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 26px;
+  -moz-column-gap: 26px;
+       column-gap: 26px;
   row-gap: 22px;
 
   margin: 0;
@@ -2119,8 +2135,6 @@ form .filter-topping {
 .legal__link:hover.legal__link::before,
 .legal__link:focus.legal__link::before {
   background-image: url('../img/decor/heart-color-icon.svg');
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -2167,11 +2181,13 @@ form .filter-topping {
 
 .modal-show {
   display: block;
-  animation: fade 0.6s;
+  -webkit-animation: fade 0.6s;
+          animation: fade 0.6s;
 }
 
 .submit-error {
-  animation: shadow 0.6s;
+  -webkit-animation: shadow 0.6s;
+          animation: shadow 0.6s;
 }
 
 .overlay {
@@ -2299,6 +2315,16 @@ form .filter-topping {
   transform: rotate(-45deg);
 }
 
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes fade {
   0% {
     opacity: 0.5;
@@ -2309,25 +2335,17 @@ form .filter-topping {
   }
 }
 
-@keyframes shake {
-  0%,
+@-webkit-keyframes shadow {
+  0%  {
+    box-shadow: 0 0 3px 1px transparent;
+  }
+
+  50% {
+    box-shadow: 0 0 5px 5px var(--basic-red);
+  }
+
   100% {
-    transform: translateX(0);
-  }
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-10px);
-  }
-
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(10px);
+    box-shadow: 0 0 3px 1px transparent;
   }
 }
 
@@ -2344,4 +2362,3 @@ form .filter-topping {
     box-shadow: 0 0 3px 1px transparent;
   }
 }
-
