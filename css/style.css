@@ -266,6 +266,7 @@ img {
 
 .main-nav__list {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -1490,6 +1491,8 @@ form .filter-topping {
 }
 
 .products {
+  display: flex;
+  flex-direction: column;
   margin-top: 40px;
   margin-bottom: 25px;
 }
@@ -1631,7 +1634,7 @@ form .filter-topping {
   justify-content: space-around;
   align-items: center;
 
-  width: 191px;
+  min-width: 191px;
   margin-top: 80px;
   margin-bottom: 30px;
   margin-left: auto;
@@ -1639,6 +1642,7 @@ form .filter-topping {
 
 .pagination__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   margin: 0;
@@ -2015,10 +2019,11 @@ form .filter-topping {
 
 .social__list {
   display: flex;
+  flex-wrap: wrap;
   min-width: 164px;
-
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
