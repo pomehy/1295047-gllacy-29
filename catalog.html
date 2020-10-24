@@ -50,7 +50,7 @@
           </button>
           <div class="main-search-wrapper">
             <label class="visually-hidden" for="main-search">Поиск по сайту</label>
-            <input class="form-input" type="search" id="main-search" placeholder="Крем-брюле">
+            <input class="form-input" type="search" name="main-search" id="main-search" placeholder="Крем-брюле">
           </div>
         </form>
         <div class="user-menu__item login">
@@ -128,6 +128,7 @@
         <form method="GET" action="https://echo.htmlacademy.ru" target="_blank">
           <fieldset>
             <legend>Сортировка:</legend>
+            <label class="visually-hidden" for="filter-sort">Сортировка мороженного по...</label>
             <select class="fieldset-style" name="sorting" id="filter-sort">
               <option value="filter-popular">по популярности</option>
               <option value="filter-low-price">сначала недорогие</option>
@@ -305,7 +306,7 @@
           </li>
         </ul>
         <div class="pagination">
-          <a class="pagination__prev pagination__prev--disabled" href="#"></a>
+          <a class="pagination__prev pagination__prev--disabled" href="#" aria-label="Кнопка переключения страниц - предыдущая"></a>
           <ul class="pagination__list">
             <li class="pagination__item">
               <a class="pagination__link pagination__link--active" href="#">1</a>
@@ -323,7 +324,7 @@
               <a class="pagination__link" href="#">5</a>
             </li>
           </ul>
-          <a class="pagination__next" href="#"></a>
+          <a class="pagination__next" href="#" aria-label="Кнопка переключения страниц - следующая"></a>
         </div>
       </section>
     </main>
