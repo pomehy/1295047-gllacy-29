@@ -919,8 +919,9 @@ img {
   bottom: 62px;
 
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   min-width: 79px;
+  max-width: 300px;
   margin: 0;
   padding: 0;
 
@@ -1494,7 +1495,6 @@ form .filter-topping {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
-  margin-bottom: 25px;
 }
 
 .products__list {
@@ -1631,10 +1631,9 @@ form .filter-topping {
 
 .pagination {
   display: flex;
-  justify-content: space-around;
   align-items: center;
 
-  min-width: 191px;
+  min-width: 189px;
   margin-top: 80px;
   margin-bottom: 30px;
   margin-left: auto;
@@ -1643,7 +1642,6 @@ form .filter-topping {
 .pagination__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 
   margin: 0;
   padding: 0;
@@ -2028,11 +2026,14 @@ form .filter-topping {
 }
 
 .social__item {
+  margin-top: 3px;
   margin-right: 12px;
+  margin-bottom: 3px;
+  margin-left: 0;
 }
 
 .social__item:last-child {
-  margin: 0;
+  margin-right: 0;
 }
 
 .social__link {
